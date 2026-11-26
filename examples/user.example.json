@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "2.0.0",
+  "predictions": [
+    {
+      "sessionId": "2026-R01-race",
+      "driverIds": [
+        "test:a",
+        "test:b"
+      ],
+      "updatedAt": "2026-11-26T00:00:00Z"
+    }
+  ],
+  "overrides": [],
+  "preferences": {
+    "selectedSeason": 2026,
+    "theme": "auto"
+  }
+}

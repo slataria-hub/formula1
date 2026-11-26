@@ -1,0 +1,127 @@
+{
+  "schemaVersion": "2.0.0",
+  "datasetStatus": "fixture",
+  "sources": [
+    {
+      "id": "test:sample",
+      "provider": "synthetic test fixture",
+      "url": "https://example.invalid/test",
+      "retrievedAt": "2026-11-26T00:00:00Z",
+      "sha256": null,
+      "revision": null
+    }
+  ],
+  "drivers": [
+    {
+      "id": "test:a",
+      "name": "Test a",
+      "aliases": [],
+      "sourceIds": [
+        "test:sample"
+      ],
+      "givenName": null,
+      "familyName": null,
+      "birthDate": null,
+      "nationality": null
+    },
+    {
+      "id": "test:b",
+      "name": "Test b",
+      "aliases": [],
+      "sourceIds": [
+        "test:sample"
+      ],
+      "givenName": null,
+      "familyName": null,
+      "birthDate": null,
+      "nationality": null
+    }
+  ],
+  "constructors": [
+    {
+      "id": "test:team",
+      "name": "Test Team",
+      "aliases": [],
+      "sourceIds": [
+        "test:sample"
+      ],
+      "nationality": null,
+      "lineageId": null
+    }
+  ],
+  "circuits": [
+    {
+      "id": "test:track",
+      "name": "Test Track",
+      "aliases": [],
+      "sourceIds": [
+        "test:sample"
+      ],
+      "country": null,
+      "locality": null
+    }
+  ],
+  "events": [
+    {
+      "id": "2026-R01",
+      "season": 2026,
+      "round": 1,
+      "name": "Synthetic Grand Prix",
+      "circuitId": "test:track",
+      "date": "2026-01-01",
+      "status": "completed",
+      "sourceIds": [
+        "test:sample"
+      ],
+      "sessions": [
+        {
+          "id": "2026-R01-race",
+          "kind": "race",
+          "status": "final",
+          "scheduledAt": null,
+          "sourceIds": [
+            "test:sample"
+          ],
+          "results": [
+            {
+              "driverId": "test:a",
+              "constructorId": "test:team",
+              "position": 1,
+              "positionText": "1",
+              "points": 12.5,
+              "started": true,
+              "classified": true,
+              "status": "finished",
+              "rawStatus": "Finished",
+              "laps": 50,
+              "gridPosition": 1,
+              "timeMs": null,
+              "gapMs": null,
+              "qualifyingTimesMs": null
+            },
+            {
+              "driverId": "test:b",
+              "constructorId": "test:team",
+              "position": 2,
+              "positionText": "2",
+              "points": 9,
+              "started": true,
+              "classified": true,
+              "status": "finished",
+              "rawStatus": "Finished",
+              "laps": 50,
+              "gridPosition": 2,
+              "timeMs": null,
+              "gapMs": null,
+              "qualifyingTimesMs": null
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "standings": [],
+  "adjustments": [],
+  "fastestLaps": [],
+  "stints": []
+}
