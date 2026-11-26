@@ -1,0 +1,47 @@
+{
+  "scope": "internal arithmetic and coverage only; not independent official row-by-row verification",
+  "datasetStatus": "draft",
+  "publicationAuthorized": false,
+  "totals": {
+    "events": 526,
+    "completed": 524,
+    "raceSessions": 524,
+    "raceRows": 11024,
+    "raceWins": 524,
+    "podiumRows": 1572,
+    "fastestLapRecords": 523,
+    "qualifyingSessions": 524,
+    "qualifyingRows": 10999,
+    "qualifyingLeaders": 524,
+    "standingSnapshots": 1048,
+    "pointComparisons": 17142,
+    "sprintSessions": 30,
+    "sprintRows": 612,
+    "missingFastestLapRecords": 1,
+    "sprint_qualifyingSessions": 24,
+    "sprint_qualifyingRows": 488,
+    "notCompleted": 2
+  },
+  "notes": [
+    "Uses awarded race/sprint points; does not reconstruct points from sporting regulations.",
+    "Constructor arithmetic aggregates by constructor, not by entrant; 2018 reset checked explicitly.",
+    "Countback candidates use classified race finishes only; do not change published rankings.",
+    "Fastest lap presence is counted, not verified independently.",
+    "Missing future results are not errors; unknown or pending events are review items.",
+    "Historical standings may be retrospective."
+  ],
+  "seasonCount": 27,
+  "knownPointExceptions": 20,
+  "issueCount": 0,
+  "countbackCandidates": 5,
+  "sharedRankGroups": 32,
+  "sharedRankSnapshots": 24,
+  "crosswalkCategories": {
+    "classification_review": 143,
+    "missing_value": 90,
+    "single_session_time_format": 87,
+    "value_conflict": 1,
+    "one_millisecond_review": 12
+  },
+  "unmatchedRows": 1
+}

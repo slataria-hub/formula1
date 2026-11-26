@@ -20,3 +20,8 @@
 - Explicit targeted reconciliation of 2000 standings, 2017 Gasly, 2018 Force India; control checks for 2007/2021, no double deductions.
 - Optional entrant and external event identity fields; validation of entrant links.
 - Conservative driver crosswalk and update safety gate; no automatic user migration or publication.
+
+### F1-003.2 — championship audit (draft)
+- Added read-only per-round championship arithmetic, coverage, wins and tentative countback diagnostics. Added crosswalk report classifier.
+- Documented source-embedded 2020 Racing Point deduction; do not apply it again. No dataset or schema edits.
+- New-year schedules remain supported without a fixed maximum year. No auto-publication.
