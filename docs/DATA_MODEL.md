@@ -50,3 +50,6 @@
 ## Уточнение F1-002: места в зачёте
 
 `standings.rows[].position` допускает `null` для записей с опубликованным специальным обозначением `positionText` (`-`, `E`, `D`). Очки и победы сохраняются без изменения. `positionText` необязательно для прежних записей с числовой позицией. Неизвестное место не заменяется порядковым номером строки; сортировка при выводе помещает записи без места после числовых. Необъяснённое отсутствие позиции останавливает импорт с контекстом. Расширение контракта 2.0.0 принимает прежние данные, но старые читатели должны быть обновлены перед чтением новых записей.
+
+### F1-003 optional additions (v2 compatible reader)
+`entrants[]`: id, name, constructorId, season, fromRound, toRound, sourceIds. `result.entrantId` and constructor `standingRow.entrantId` refer to an entrant; multiple entries for one constructor in standings are valid only with distinct explicit entrant IDs. Standing rows may refer to an excluded historical entry after its interval ends. `event.externalEventId` and `event.grandPrixKey` preserve provider identity separately from round ID. Do not assume a round ID survives calendar renumbering. See docs/F1_003.md.

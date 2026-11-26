@@ -115,6 +115,7 @@ def import_archive(path, season=None, from_season=2000, to_season=None, as_of=No
             year=int(e['year']); rnd=int(e['round']); rid=e['id']; eid=f'{year}-R{rnd:02d}'; day=date.fromisoformat(e['date']); completed=bool(by_kind['race'][rid]); in_progress=any(by_kind[k][rid] for k in SESSION_TABLES if k!='race')
             event_status='completed' if completed else 'in_progress' if in_progress else 'scheduled' if day>=as_of else 'unknown'
             event=dict(id=eid,season=year,round=rnd,name=gp[e['grandPrixId']]['fullName'],circuitId=ident(e['circuitId']),date=e['date'],status=event_status,sourceIds=[sid],sessions=[])
+            event['externalEventId']=ident('race-'+rid); event['grandPrixKey']=ident(e['grandPrixId'])
             used_c.add(e['circuitId']); stat=report['seasons'].setdefault(str(year),dict(events=0,completed=0,raceRows=0,qualifyingRows=0,sprintRows=0,sprintQualifyingRows=0,missingQualifyingRounds=[],pendingRaceRounds=[])); stat['events']+=1; stat['completed']+=completed
             for kind in SESSION_TABLES:
                 rr=sorted(by_kind[kind][rid],key=lambda r:int(r['positionDisplayOrder']))

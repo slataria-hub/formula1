@@ -15,3 +15,8 @@
 - Пробный Jolpica-импорт 2000, патчи сетевых запросов, поэтапной загрузки, зачётов и независимой сверки; 46 локальных тестов пройдены. Formula1.com HTTP 403.
 - F1DB CSV: новый офлайн-импортер, автоматическое обнаружение сезонов, отчёт конфликтов, 13 новых тестов. Полный прогон 59/59; независимая проверка ещё не завершена.
 - Зафиксировано требование автоматического обновления будущих сезонов и гран-при на этапе 03.
+
+### F1-003 pilot (unreleased)
+- Explicit targeted reconciliation of 2000 standings, 2017 Gasly, 2018 Force India; control checks for 2007/2021, no double deductions.
+- Optional entrant and external event identity fields; validation of entrant links.
+- Conservative driver crosswalk and update safety gate; no automatic user migration or publication.

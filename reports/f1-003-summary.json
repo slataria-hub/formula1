@@ -1,0 +1,66 @@
+{
+  "baseCommit": "7b1ddb64f4faf0c9e050e5dcb34c902f7a977d24",
+  "eventCount": 526,
+  "review": {
+    "changes": [
+      {
+        "case": "2000 standings",
+        "id": "pedro-diniz",
+        "before": 18,
+        "after": 17
+      },
+      {
+        "case": "2000 standings",
+        "id": "johnny-herbert",
+        "before": 17,
+        "after": 18
+      },
+      {
+        "case": "2000 standings",
+        "id": "gaston-mazzacane",
+        "before": 21,
+        "after": 20
+      },
+      {
+        "case": "2000 standings",
+        "id": "nick-heidfeld",
+        "before": 20,
+        "after": 21
+      },
+      {
+        "case": "2017 Gasly",
+        "before": null,
+        "after": false
+      },
+      {
+        "case": "2018 entrants",
+        "added": "entrant:2018-sahara-force-india",
+        "retained": "entrant:2018-racing-point-force-india"
+      }
+    ],
+    "checks": [
+      "2000 drivers control points matched",
+      "2000 constructors control points matched",
+      "2007 drivers control points matched",
+      "2007 McLaren source exclusion preserved",
+      "2021 drivers control points matched"
+    ],
+    "status": "draft",
+    "scope": "targeted historical checks, not full independent verification",
+    "structuralValidation": "pass"
+  },
+  "updateCompatibility": "pass",
+  "crosswalk2000": {
+    "drivers": 23,
+    "comparedRows": 461,
+    "fieldDifferences": {
+      "position": 143,
+      "timeMs": 102,
+      "qualifyingTimesMs": 88
+    },
+    "unmatchedRows": 1,
+    "constructorCandidates": 11,
+    "circuitCandidates": 17
+  },
+  "release": "not authorized"
+}

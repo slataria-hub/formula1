@@ -64,6 +64,12 @@
       "items": {
         "$ref": "#/$defs/stint"
       }
+    },
+    "entrants": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/entrant"
+      }
     }
   },
   "required": [
@@ -505,6 +511,10 @@
               "type": "null"
             }
           ]
+        },
+        "entrantId": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_-]*:[A-Za-z0-9_.-]+$"
         }
       },
       "required": [
@@ -657,6 +667,14 @@
           "items": {
             "$ref": "#/$defs/session"
           }
+        },
+        "externalEventId": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_-]*:[A-Za-z0-9_.-]+$"
+        },
+        "grandPrixKey": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_-]*:[A-Za-z0-9_.-]+$"
         }
       },
       "required": [
@@ -706,6 +724,10 @@
             "null"
           ],
           "minLength": 1
+        },
+        "entrantId": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_-]*:[A-Za-z0-9_.-]+$"
         }
       },
       "required": [
@@ -964,6 +986,57 @@
         "lapTo",
         "compound",
         "tyreAgeAtStart",
+        "sourceIds"
+      ],
+      "additionalProperties": false
+    },
+    "entrant": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_-]*:[A-Za-z0-9_.-]+$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "constructorId": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_-]*:[A-Za-z0-9_.-]+$"
+        },
+        "season": {
+          "type": "integer",
+          "minimum": 1950,
+          "maximum": 9999
+        },
+        "fromRound": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 999
+        },
+        "toRound": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 999
+        },
+        "sourceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_-]*:[A-Za-z0-9_.-]+$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "constructorId",
+        "season",
+        "fromRound",
+        "toRound",
         "sourceIds"
       ],
       "additionalProperties": false

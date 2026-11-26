@@ -41,11 +41,20 @@ def validate(data, user=None, release=False):
     teams = index(data['constructors'], lambda x:x['id'], 'constructor')
     circuits = index(data['circuits'], lambda x:x['id'], 'circuit')
     events = index(data['events'], lambda x:x['id'], 'event')
+    entrants = index(data.get('entrants',[]),lambda x:x['id'],'entrant')
+    external_events = [e for e in events.values() if 'externalEventId' in e]
+    index(external_events,lambda x:x['externalEventId'],'external event')
     sessions = {}
     participants = {}
     def provenance(row, label):
         for sid in row['sourceIds']:
             check(sid in sources, f'{label}: unknown source {sid}')
+    for eid, entry in entrants.items():
+        provenance(entry,eid)
+        check(entry['constructorId'] in teams,f'{eid}: unknown entrant constructor')
+        check(entry['fromRound']<=entry['toRound'],f'{eid}: reversed entrant period')
+        for rnd in range(entry['fromRound'],entry['toRound']+1):
+            check(f"{entry['season']}-R{rnd:02d}" in events,f'{eid}: entrant round missing')
     for registry, label in [(drivers,'driver'),(teams,'constructor'),(circuits,'circuit')]:
         aliases = {}
         for k, row in registry.items():
@@ -74,6 +83,9 @@ def validate(data, user=None, release=False):
                 did=r['driverId']; p=r['position']; label=f'{sid}/{did}'
                 check(did in drivers, f'{label}: unknown driver')
                 check(r['constructorId'] in teams, f'{label}: unknown constructor')
+                if 'entrantId' in r:
+                    en=entrants.get(r['entrantId'])
+                    check(en is not None and en['constructorId']==r['constructorId'] and en['season']==event['season'] and en['fromRound']<=event['round']<=en['toRound'],f'{label}: invalid entrant assignment')
                 check(did not in seen, f'{label}: duplicate driver'); seen.add(did)
                 if p is not None and r['classified'] is True:
                     check(p not in positions, f'{sid}: duplicate classified position {p}'); positions.add(p)
@@ -90,8 +102,16 @@ def validate(data, user=None, release=False):
         provenance(row,label)
         check(f"{row['season']}-R{row['afterRound']:02d}" in events, f'{label}: unknown round')
         registry=drivers if row['kind']=='drivers' else teams
-        index(row['rows'],lambda x:x['entityId'],label)
-        for r in row['rows']: check(r['entityId'] in registry,f'{label}: unknown entity {r["entityId"]}')
+        index(row['rows'],lambda x:x.get('entrantId',x['entityId']),label)
+        grouped={}
+        for r in row['rows']:
+            check(r['entityId'] in registry,f'{label}: unknown entity {r["entityId"]}')
+            grouped.setdefault(r['entityId'],[]).append(r)
+            if 'entrantId' in r:
+                en=entrants.get(r['entrantId'])
+                check(row['kind']=='constructors' and en is not None and en['constructorId']==r['entityId'] and en['season']==row['season'] and en['fromRound']<=row['afterRound'],f'{label}: invalid entrant standing')
+        for entity,rr in grouped.items():
+            check(len(rr)==1 or all('entrantId' in r for r in rr),f'{label}: ambiguous duplicate entity {entity}')
     index(data['standings'],lambda x:(x['season'],x['afterRound'],x['kind']),'standings snapshot')
     for row in data['adjustments']:
         label=f"adjustment {row['season']}/{row['entityId']}"; provenance(row,label)
