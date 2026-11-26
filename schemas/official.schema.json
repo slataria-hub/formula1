@@ -680,7 +680,10 @@
           "pattern": "^[a-z][a-z0-9_-]*:[A-Za-z0-9_.-]+$"
         },
         "position": {
-          "type": "integer",
+          "type": [
+            "integer",
+            "null"
+          ],
           "minimum": 1
         },
         "points": {
@@ -696,6 +699,13 @@
               "type": "null"
             }
           ]
+        },
+        "positionText": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
         }
       },
       "required": [
@@ -704,7 +714,32 @@
         "points",
         "wins"
       ],
-      "additionalProperties": false
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "position": {
+                "type": "null"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "positionText"
+            ],
+            "properties": {
+              "positionText": {
+                "enum": [
+                  "-",
+                  "E",
+                  "D"
+                ]
+              }
+            }
+          }
+        }
+      ]
     },
     "standing": {
       "type": "object",

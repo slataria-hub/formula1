@@ -1,0 +1,396 @@
+{
+  "season": 2000,
+  "sources": [
+    {
+      "id": "reference:f1-2000-drivers",
+      "provider": "Formula1.com",
+      "url": "https://www.formula1.com/en/results/2000/drivers",
+      "retrievedAt": "2026-11-26T19:37:40.684951+00:00",
+      "sha256": null,
+      "revision": null
+    },
+    {
+      "id": "reference:f1-2000-constructors",
+      "provider": "Formula1.com",
+      "url": "https://www.formula1.com/en/results/2000/team",
+      "retrievedAt": "2026-11-26T19:37:40.684951+00:00",
+      "sha256": null,
+      "revision": null
+    },
+    {
+      "id": "reference:f1-2000-races",
+      "provider": "Formula1.com",
+      "url": "https://www.formula1.com/en/results/2000/races",
+      "retrievedAt": "2026-11-26T19:37:40.684951+00:00",
+      "sha256": null,
+      "revision": null
+    },
+    {
+      "id": "reference:f1-2000-poles",
+      "provider": "Formula1.com",
+      "url": "https://www.formula1.com/en/results/2000/awards/pole-positions",
+      "retrievedAt": "2026-11-26T19:37:40.684951+00:00",
+      "sha256": null,
+      "revision": null
+    },
+    {
+      "id": "reference:f1-2000-mclaren",
+      "provider": "Formula1.com",
+      "url": "https://www.formula1.com/en/results/2000/team/McLaren-Mercedes",
+      "retrievedAt": "2026-11-26T19:37:40.684951+00:00",
+      "sha256": null,
+      "revision": null
+    },
+    {
+      "id": "reference:f1-2000-penalty",
+      "provider": "Autosport (Reuters)",
+      "url": "https://www.autosport.com/f1/news/mclaren-fined-and-penalised-hakkinen-keeps-points-5055132/5055132/",
+      "retrievedAt": "2026-11-26T19:37:40.684951+00:00",
+      "sha256": null,
+      "revision": null
+    }
+  ],
+  "sourceIds": {
+    "drivers": "reference:f1-2000-drivers",
+    "constructors": "reference:f1-2000-constructors",
+    "races": "reference:f1-2000-races",
+    "poles": "reference:f1-2000-poles",
+    "mclaren": "reference:f1-2000-mclaren",
+    "penalty": "reference:f1-2000-penalty"
+  },
+  "drivers": [
+    {
+      "entityId": "jolpica:michael_schumacher",
+      "position": 1,
+      "points": 108
+    },
+    {
+      "entityId": "jolpica:hakkinen",
+      "position": 2,
+      "points": 89
+    },
+    {
+      "entityId": "jolpica:coulthard",
+      "position": 3,
+      "points": 73
+    },
+    {
+      "entityId": "jolpica:barrichello",
+      "position": 4,
+      "points": 62
+    },
+    {
+      "entityId": "jolpica:ralf_schumacher",
+      "position": 5,
+      "points": 24
+    },
+    {
+      "entityId": "jolpica:fisichella",
+      "position": 6,
+      "points": 18
+    },
+    {
+      "entityId": "jolpica:villeneuve",
+      "position": 7,
+      "points": 17
+    },
+    {
+      "entityId": "jolpica:button",
+      "position": 8,
+      "points": 12
+    },
+    {
+      "entityId": "jolpica:frentzen",
+      "position": 9,
+      "points": 11
+    },
+    {
+      "entityId": "jolpica:trulli",
+      "position": 10,
+      "points": 6
+    },
+    {
+      "entityId": "jolpica:salo",
+      "position": 11,
+      "points": 6
+    },
+    {
+      "entityId": "jolpica:verstappen",
+      "position": 12,
+      "points": 5
+    },
+    {
+      "entityId": "jolpica:irvine",
+      "position": 13,
+      "points": 4
+    },
+    {
+      "entityId": "jolpica:zonta",
+      "position": 14,
+      "points": 3
+    },
+    {
+      "entityId": "jolpica:wurz",
+      "position": 15,
+      "points": 2
+    },
+    {
+      "entityId": "jolpica:rosa",
+      "position": 16,
+      "points": 2
+    },
+    {
+      "entityId": "jolpica:diniz",
+      "position": 17,
+      "points": 0
+    },
+    {
+      "entityId": "jolpica:herbert",
+      "position": 18,
+      "points": 0
+    },
+    {
+      "entityId": "jolpica:gene",
+      "position": 19,
+      "points": 0
+    },
+    {
+      "entityId": "jolpica:mazzacane",
+      "position": 20,
+      "points": 0
+    },
+    {
+      "entityId": "jolpica:heidfeld",
+      "position": 21,
+      "points": 0
+    },
+    {
+      "entityId": "jolpica:alesi",
+      "position": 22,
+      "points": 0
+    },
+    {
+      "entityId": "jolpica:burti",
+      "position": 23,
+      "points": 0
+    }
+  ],
+  "constructors": [
+    {
+      "entityId": "jolpica:ferrari",
+      "position": 1,
+      "points": 170
+    },
+    {
+      "entityId": "jolpica:mclaren",
+      "position": 2,
+      "points": 152
+    },
+    {
+      "entityId": "jolpica:williams",
+      "position": 3,
+      "points": 36
+    },
+    {
+      "entityId": "jolpica:benetton",
+      "position": 4,
+      "points": 20
+    },
+    {
+      "entityId": "jolpica:bar",
+      "position": 5,
+      "points": 20
+    },
+    {
+      "entityId": "jolpica:jordan",
+      "position": 6,
+      "points": 17
+    },
+    {
+      "entityId": "jolpica:arrows",
+      "position": 7,
+      "points": 7
+    },
+    {
+      "entityId": "jolpica:sauber",
+      "position": 8,
+      "points": 6
+    },
+    {
+      "entityId": "jolpica:jaguar",
+      "position": 9,
+      "points": 4
+    }
+  ],
+  "unlistedConstructors": [
+    "jolpica:minardi",
+    "jolpica:prost"
+  ],
+  "races": [
+    {
+      "round": 1,
+      "date": "2000-03-12",
+      "driverId": "jolpica:michael_schumacher",
+      "laps": 58,
+      "timeMs": 5641987,
+      "poleDriverId": "jolpica:hakkinen",
+      "poleTimeMs": 90556
+    },
+    {
+      "round": 2,
+      "date": "2000-03-26",
+      "driverId": "jolpica:michael_schumacher",
+      "laps": 71,
+      "timeMs": 5495271,
+      "poleDriverId": "jolpica:hakkinen",
+      "poleTimeMs": 74111
+    },
+    {
+      "round": 3,
+      "date": "2000-04-09",
+      "driverId": "jolpica:michael_schumacher",
+      "laps": 62,
+      "timeMs": 5499776,
+      "poleDriverId": "jolpica:hakkinen",
+      "poleTimeMs": 84714
+    },
+    {
+      "round": 4,
+      "date": "2000-04-23",
+      "driverId": "jolpica:coulthard",
+      "laps": 60,
+      "timeMs": 5330108,
+      "poleDriverId": "jolpica:barrichello",
+      "poleTimeMs": 85703
+    },
+    {
+      "round": 5,
+      "date": "2000-05-07",
+      "driverId": "jolpica:hakkinen",
+      "laps": 65,
+      "timeMs": 5635390,
+      "poleDriverId": "jolpica:michael_schumacher",
+      "poleTimeMs": 80974
+    },
+    {
+      "round": 6,
+      "date": "2000-05-21",
+      "driverId": "jolpica:michael_schumacher",
+      "laps": 67,
+      "timeMs": 6120307,
+      "poleDriverId": "jolpica:coulthard",
+      "poleTimeMs": 77529
+    },
+    {
+      "round": 7,
+      "date": "2000-06-04",
+      "driverId": "jolpica:coulthard",
+      "laps": 78,
+      "timeMs": 6568213,
+      "poleDriverId": "jolpica:michael_schumacher",
+      "poleTimeMs": 79475
+    },
+    {
+      "round": 8,
+      "date": "2000-06-18",
+      "driverId": "jolpica:michael_schumacher",
+      "laps": 69,
+      "timeMs": 6072313,
+      "poleDriverId": "jolpica:michael_schumacher",
+      "poleTimeMs": 78439
+    },
+    {
+      "round": 9,
+      "date": "2000-07-02",
+      "driverId": "jolpica:coulthard",
+      "laps": 72,
+      "timeMs": 5885538,
+      "poleDriverId": "jolpica:michael_schumacher",
+      "poleTimeMs": 75632
+    },
+    {
+      "round": 10,
+      "date": "2000-07-16",
+      "driverId": "jolpica:hakkinen",
+      "laps": 71,
+      "timeMs": 5295818,
+      "poleDriverId": "jolpica:hakkinen",
+      "poleTimeMs": 70410
+    },
+    {
+      "round": 11,
+      "date": "2000-07-30",
+      "driverId": "jolpica:barrichello",
+      "laps": 45,
+      "timeMs": 5134418,
+      "poleDriverId": "jolpica:coulthard",
+      "poleTimeMs": 105697
+    },
+    {
+      "round": 12,
+      "date": "2000-08-13",
+      "driverId": "jolpica:hakkinen",
+      "laps": 77,
+      "timeMs": 6333869,
+      "poleDriverId": "jolpica:michael_schumacher",
+      "poleTimeMs": 77514
+    },
+    {
+      "round": 13,
+      "date": "2000-08-27",
+      "driverId": "jolpica:hakkinen",
+      "laps": 44,
+      "timeMs": 5294494,
+      "poleDriverId": "jolpica:hakkinen",
+      "poleTimeMs": 110646
+    },
+    {
+      "round": 14,
+      "date": "2000-09-10",
+      "driverId": "jolpica:michael_schumacher",
+      "laps": 53,
+      "timeMs": 5251638,
+      "poleDriverId": "jolpica:michael_schumacher",
+      "poleTimeMs": 83770
+    },
+    {
+      "round": 15,
+      "date": "2000-09-24",
+      "driverId": "jolpica:michael_schumacher",
+      "laps": 73,
+      "timeMs": 5790883,
+      "poleDriverId": "jolpica:michael_schumacher",
+      "poleTimeMs": 74266
+    },
+    {
+      "round": 16,
+      "date": "2000-10-08",
+      "driverId": "jolpica:michael_schumacher",
+      "laps": 53,
+      "timeMs": 5393435,
+      "poleDriverId": "jolpica:michael_schumacher",
+      "poleTimeMs": 95825
+    },
+    {
+      "round": 17,
+      "date": "2000-10-22",
+      "driverId": "jolpica:michael_schumacher",
+      "laps": 56,
+      "timeMs": 5754235,
+      "poleDriverId": "jolpica:michael_schumacher",
+      "poleTimeMs": 97397
+    }
+  ],
+  "adjustment": {
+    "season": 2000,
+    "afterRound": 10,
+    "entityId": "jolpica:mclaren",
+    "kind": "constructor",
+    "pointsDelta": -10,
+    "reason": "Austrian GP: constructors-only deduction of 10 points, confirmed 25 July 2000; Hakkinen retains driver points.",
+    "sourceIds": [
+      "reference:f1-2000-mclaren",
+      "reference:f1-2000-penalty"
+    ]
+  }
+}
