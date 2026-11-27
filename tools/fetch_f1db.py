@@ -45,8 +45,18 @@ def release_asset(release):
 
 def request(url, timeout, api=False):
     headers={'User-Agent':'F1Analytics-release-fetch/1.0','Accept':'application/vnd.github+json' if api else 'application/octet-stream'}
-    if api: headers['X-GitHub-Api-Version']='2022-11-28'
-    return urlopen(Request(url,headers=headers),timeout=timeout)
+    if api:
+        if url != API:
+            raise ValueError('unexpected release API URL')
+        headers['X-GitHub-Api-Version']='2022-11-28'
+    req=Request(url,headers=headers)
+    if api:
+        token=os.environ.get('F1DB_GITHUB_TOKEN','').strip()
+        if token:
+            # urllib does not copy unredirected headers into redirected requests.
+            # Never send the token to release asset downloads or other hosts.
+            req.add_unredirected_header('Authorization','Bearer '+token)
+    return urlopen(req,timeout=timeout)
 
 
 def retry(operation, attempts=3):

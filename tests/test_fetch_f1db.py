@@ -1,6 +1,7 @@
 import hashlib
 import io
 import json
+import os
 import sys
 import tempfile
 import unittest
@@ -8,9 +9,10 @@ import zipfile
 from pathlib import Path
 from unittest.mock import patch
 from urllib.error import HTTPError
+from urllib.request import HTTPRedirectHandler
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'tools'))
-from fetch_f1db import release_asset, acquire, latest, REQUIRED, BASE, NAME
+from fetch_f1db import release_asset, acquire, latest, REQUIRED, BASE, NAME, API, request
 
 
 def make_zip(names=REQUIRED):
@@ -76,6 +78,31 @@ class FetchTests(unittest.TestCase):
         with patch('fetch_f1db.request',return_value=io.BytesIO(json.dumps(self.meta).encode())) as req:
             self.assertEqual(latest(),self.asset)
         self.assertTrue(req.call_args.kwargs['api'])
+    def test_authenticated_api_only(self):
+        with patch.dict(os.environ, {'F1DB_GITHUB_TOKEN':'fake-test-token'}), patch('fetch_f1db.urlopen') as opened:
+            request(API,30,api=True)
+            req=opened.call_args.args[0]
+            self.assertEqual(req.get_header('Authorization'),'Bearer fake-test-token')
+            self.assertEqual(req.get_header('X-github-api-version'),'2022-11-28')
+            request(self.asset['url'],30)
+            self.assertIsNone(opened.call_args.args[0].get_header('Authorization'))
+            with self.assertRaisesRegex(ValueError,'unexpected release API URL'):
+                request('https://example.org/metadata',30,api=True)
+            self.assertEqual(opened.call_count,2)
+    def test_token_not_forwarded_on_redirect(self):
+        with patch.dict(os.environ, {'F1DB_GITHUB_TOKEN':'fake-test-token'}), patch('fetch_f1db.urlopen') as opened:
+            request(API,30,api=True)
+            req=opened.call_args.args[0]
+            redirected=HTTPRedirectHandler().redirect_request(req,None,302,'Found',{},'https://example.org/redirect')
+            self.assertIsNone(redirected.get_header('Authorization'))
+    def test_unauthenticated_local_api(self):
+        with patch.dict(os.environ, {'F1DB_GITHUB_TOKEN':''}), patch('fetch_f1db.urlopen') as opened:
+            request(API,30,api=True)
+            self.assertIsNone(opened.call_args.args[0].get_header('Authorization'))
+    def test_authenticated_rate_limit_still_blocks(self):
+        with patch.dict(os.environ, {'F1DB_GITHUB_TOKEN':'fake-test-token'}), patch('fetch_f1db.urlopen',side_effect=HTTPError(API,403,'rate limit exceeded',None,None)) as opened:
+            with self.assertRaises(HTTPError): latest()
+            self.assertEqual(opened.call_count,1)
     def test_partial_file_cleanup(self):
         with patch('fetch_f1db.request',return_value=io.BytesIO(self.payload[:10])):
             with self.assertRaisesRegex(ValueError,'size mismatch'):acquire(self.asset,self.cache)

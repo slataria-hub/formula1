@@ -74,3 +74,7 @@
 - Cloud bootstrap from checksum-pinned reference archive and sporting fingerprint; fetch latest stable and rehearse activation in disposable storage. No persistent production state or publication.
 - Read-only branch-push workflow with future schedule/manual dispatch and 14-day report/candidate artifacts; no main changes.
 - Ten targeted cloud orchestration tests; local/hosted acceptance pending.
+
+### F1-006.4.1 — hotfix
+- Исправлен анонимный вызов API F1DB в GitHub Actions: опциональный встроенный токен, без передачи токена в ZIP-загрузки/редиректы и без расширения прав. При исчерпании лимита обновление по-прежнему блокируется.
+- Добавлены 4 теста авторизации и изоляции токена; облачная приёмка ожидается.

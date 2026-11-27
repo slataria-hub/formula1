@@ -29,6 +29,8 @@ jobs:
           .venv/bin/python -m unittest discover -s tests -v
           node --test tests/*.mjs
       - name: Prepare and rehearse DRAFT update
+        env:
+          F1DB_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: .venv/bin/python tools/cloud_update.py --output private/cloud-run
       - name: Upload diagnostic reports (no user data)
         if: always()
