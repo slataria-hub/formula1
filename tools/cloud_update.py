@@ -1,5 +1,6 @@
 """Run a disposable F1DB DRAFT rehearsal, never publish or retain active state."""
 import argparse
+import json
 from datetime import date
 from pathlib import Path
 
@@ -31,7 +32,7 @@ def make_baseline(output, cache, seed_archive=None):
     return state
 
 
-def rehearse(output, *, seed_archive=None, release_json=None, local_archive=None, as_of=None):
+def rehearse(output, *, seed_archive=None, release_json=None, local_archive=None, as_of=None, baseline_raw=None):
     output = private_path(output)
     if bool(release_json) != bool(local_archive) or (as_of and not release_json):
         raise ValueError('offline replay requires release metadata and matching archive')
@@ -45,9 +46,15 @@ def rehearse(output, *, seed_archive=None, release_json=None, local_archive=None
     try:
         cache = output/'cache'
         baseline = output/'baseline.json'
-        summary['seedResult'] = make_baseline(baseline, cache, seed_archive)
+        if baseline_raw is None:
+            summary['seedResult'] = make_baseline(baseline, cache, seed_archive)
+        else:
+            if seed_archive is not None:
+                raise ValueError('cannot combine stored baseline and seed archive')
+            baseline.write_bytes(baseline_raw)
+            summary.update(seedResult='STORED', baselineKind='last stored DRAFT')
         original = digest(baseline.read_bytes())
-        summary.update(seedSha256=original, seedSportsSha256=SEED_SPORTS, stage='prepare')
+        summary.update(seedSha256=original, seedSportsSha256=sports_digest(json.loads(baseline.read_bytes())), stage='prepare')
         report = prepare(baseline, reports/'update', cache, release_json=release_json,
                          local_archive=local_archive, as_of=as_of)
         summary.update(release=report['release']['tag'], audit=report['audit'], changes=report['changes'], stage='activation rehearsal')

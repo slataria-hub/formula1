@@ -51,3 +51,6 @@ The local preview includes a read-only Monte Carlo estimate for the Drivers' and
 
 ### Cloud DRAFT rehearsal (F1-006.4)
 See [F1-006.4](docs/F1_006_4.md). Branch pushes can run the read-only GitHub Actions rehearsal. It rebuilds an initial reference, checks latest F1DB, and uploads DRAFT diagnostic artifacts only. Schedule/manual dispatch require the workflow on the default branch; no merge, publication or persistent cloud activation is authorized yet.
+
+F1-006.5: постоянное DRAFT-хранилище `f1-data` (явный bootstrap, история Git,
+без публикации сайта) — [инструкция](docs/F1_006_5.md).

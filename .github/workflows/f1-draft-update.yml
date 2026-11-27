@@ -8,10 +8,12 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: f1-draft-update-${{ github.ref }}
+  group: f1-draft-data
   cancel-in-progress: false
 jobs:
   draft:
+    permissions:
+      contents: write
     runs-on: ubuntu-24.04
     timeout-minutes: 25
     env:
@@ -28,10 +30,11 @@ jobs:
         run: |
           .venv/bin/python -m unittest discover -s tests -v
           node --test tests/*.mjs
-      - name: Prepare and rehearse DRAFT update
+      - name: Verify and persist DRAFT update
         env:
           F1DB_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: .venv/bin/python tools/cloud_update.py --output private/cloud-run
+          F1_DATA_GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: .venv/bin/python tools/persist_draft.py update --output private/cloud-run
       - name: Upload diagnostic reports (no user data)
         if: always()
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
@@ -40,6 +43,7 @@ jobs:
           path: |
             private/cloud-run/reports/cloud-summary.json
             private/cloud-run/reports/activation.json
+            private/cloud-run/reports/persistence.json
             private/cloud-run/reports/update/*-report.json
           if-no-files-found: warn
           retention-days: 14
