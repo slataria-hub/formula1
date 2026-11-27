@@ -48,3 +48,6 @@ F1_BACKUP_2026-11-26.zip храните локально, не публикуй�
 
 ## F1-005 championship probabilities
 The local preview includes a read-only Monte Carlo estimate for the Drivers' and Constructors' titles. It uses season-specific scoring profiles, current published standings, remaining race/sprint sessions, and an exact mathematical clinch check. See `docs/F1_005.md` for methodology, limits, FIA sources and local commands. No forecast authorizes publication of a draft dataset.
+
+### Cloud DRAFT rehearsal (F1-006.4)
+See [F1-006.4](docs/F1_006_4.md). Branch pushes can run the read-only GitHub Actions rehearsal. It rebuilds an initial reference, checks latest F1DB, and uploads DRAFT diagnostic artifacts only. Schedule/manual dispatch require the workflow on the default branch; no merge, publication or persistent cloud activation is authorized yet.

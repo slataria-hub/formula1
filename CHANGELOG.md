@@ -64,3 +64,13 @@
 - Confirmed live F1DB release download on user's PC; local CACHE replay pending.
 - Added private update pipeline with release metadata, historical reconciliation, compatibility check, audit and change reports, optional read-only browser prediction backup check. No activation or publication. No hard-coded terminal season.
 - Added 12 target tests; offline real archive replay completed with zero audit issues and three countback review candidates.
+
+## F1-006.3 — local managed DRAFT activation
+- F1-006.2 locally accepted (126 tests, live CACHE, no sporting changes, 0 audit issues).
+- New private-only activation tool: exact hashes, conservative sporting comparison, repeated validation, immutable-by-convention hash-keyed backups, atomic file switch, lock, journal and explicit rollback. Optional user export checks; no browser writes.
+- 20 targeted tests. No source schema, preview assets or public deployment changes; publication remains blocked.
+
+### F1-006.4 — GitHub Actions DRAFT rehearsal
+- Cloud bootstrap from checksum-pinned reference archive and sporting fingerprint; fetch latest stable and rehearse activation in disposable storage. No persistent production state or publication.
+- Read-only branch-push workflow with future schedule/manual dispatch and 14-day report/candidate artifacts; no main changes.
+- Ten targeted cloud orchestration tests; local/hosted acceptance pending.
