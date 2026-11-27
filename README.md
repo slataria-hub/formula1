@@ -45,3 +45,6 @@ F1_BACKUP_2026-11-26.zip храните локально, не публикуй�
 ## Ограничения
 
 Валидатор проверяет структуру и часть семантических инвариантов, но не подтверждает фактическую достоверность гонок, полноту календаря, соответствие регламентам или зачётам FIA. `--release` — предварительный технический барьер, не сертификат качества. Сетевой импорт и новый UI будут разработаны отдельно. Не изменяйте исходные копии.
+
+## F1-005 championship probabilities
+The local preview includes a read-only Monte Carlo estimate for the Drivers' and Constructors' titles. It uses season-specific scoring profiles, current published standings, remaining race/sprint sessions, and an exact mathematical clinch check. See `docs/F1_005.md` for methodology, limits, FIA sources and local commands. No forecast authorizes publication of a draft dataset.

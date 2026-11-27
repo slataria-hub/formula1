@@ -1,0 +1,60 @@
+{
+  "scope": "F1-005 current-season mathematical clinch control; local DRAFT candidate only",
+  "datasetStatus": "draft",
+  "sourceRevision": "v2026.21.0",
+  "sourceArchiveSha256": "8c33f41f7e095e995634305a33b28bd8638366056f877109ffc290d06d341950",
+  "season": 2026,
+  "events": {
+    "total": 23,
+    "completed": 21,
+    "remainingRaces": 2,
+    "remainingSprints": 0,
+    "remainingEvents": [
+      {
+        "round": 22,
+        "name": "Qatar Grand Prix",
+        "date": "2026-11-29"
+      },
+      {
+        "round": 23,
+        "name": "Abu Dhabi Grand Prix",
+        "date": "2026-12-06"
+      }
+    ]
+  },
+  "driverChampionship": {
+    "leader": "Kimi Antonelli",
+    "points": 402,
+    "runnerUp": "Max Verstappen",
+    "runnerUpPoints": 304,
+    "maximumRemainingPoints": 50,
+    "gap": 98,
+    "mathematicallyClinched": "f1db:kimi-antonelli",
+    "probability": 100
+  },
+  "constructorChampionship": {
+    "leader": "Mercedes",
+    "points": 666,
+    "runnerUp": "Ferrari",
+    "runnerUpPoints": 517,
+    "maximumRemainingPoints": 86,
+    "gap": 149,
+    "mathematicallyClinched": "f1db:mercedes",
+    "probability": 100
+  },
+  "simulationsRun": 0,
+  "publicationAuthorized": false,
+  "historicalBacktest": {
+    "simulationsPerCase": 5000,
+    "driverTop1": 23,
+    "constructorTop1": 23,
+    "driverNonClinchedCases": 12,
+    "constructorNonClinchedCases": 11,
+    "driverNonClinchedTop1": 9,
+    "constructorNonClinchedTop1": 8,
+    "meanNonClinchedDriverChampionProbability": 63.64833333333333,
+    "meanNonClinchedConstructorChampionProbability": 73.31636363636363,
+    "meanNonClinchedDriverBrier": 0.40978092,
+    "meanNonClinchedConstructorBrier": 0.25050091636363636
+  }
+}

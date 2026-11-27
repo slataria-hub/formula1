@@ -1,0 +1,42 @@
+F1-005 verification summary — 2026-11-27
+
+JavaScript:
+  node --test tests/*.mjs
+  44 tests passed, 0 failed, 0 skipped.
+
+Python regression:
+  python -m unittest discover -s tests -v
+  100 tests total, 0 failures, 12 skipped.
+  The 12 skips require the historical Jolpica 2000 candidate, which is not included in the isolated development workspace. The F1DB-backed historical import/reconciliation tests ran.
+
+Dataset:
+  python tools/validate_data.py private/f1db-all-f1005-reviewed.json
+  PASS (structural checks only).
+
+Preview build:
+  python tools/build_preview.py private/f1db-all-f1005-reviewed.json --output private/preview-v2-5
+  PASS local preview: 27 seasons; DRAFT only; publication not authorized.
+
+HTTP smoke test:
+  /                 HTTP 200
+  /app.mjs          HTTP 200
+  /model.mjs        HTTP 200
+  /user.mjs         HTTP 200
+  /championship.mjs HTTP 200
+  /official.json    HTTP 200
+
+Chromium browser navigation:
+  Blocked by the development environment with ERR_BLOCKED_BY_ADMINISTRATOR for localhost.
+  Local browser visual acceptance remains required on the user's PC.
+
+2026 control:
+  21/23 events completed; 2 races and 0 sprints remain.
+  Drivers: Kimi Antonelli 402, Max Verstappen 304, gap 98, maximum remaining points 50.
+  Constructors: Mercedes 666, Ferrari 517, gap 149, maximum remaining team points 86.
+  Both titles mathematically clinched within the imported DRAFT snapshot; Monte Carlo not run.
+
+Historical holdout backtest:
+  2000–2025, last two races held out, 5,000 scenarios per season.
+  26 seasons; predicted champion top-1: drivers 23/26, constructors 23/26.
+  Among mathematically open cases: drivers 9/12, constructors 8/11.
+  Internal exploratory backtest on one F1DB archive; not independent external validation.

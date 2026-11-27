@@ -1,0 +1,55 @@
+{
+  "status": "draft_ready",
+  "publicationAuthorized": false,
+  "activated": false,
+  "stage": "complete",
+  "mode": "offline",
+  "userCheck": "not supplied (browser storage not accessed)",
+  "baselineSha256": "dbca4be60ac112ac9f7051a2c9696b172e7639c25cddf3c378e627b2e2d24a96",
+  "release": {
+    "tag": "v2026.21.0",
+    "url": "https://github.com/f1db/f1db/releases/download/v2026.21.0/f1db-csv.zip",
+    "sha256": "8c33f41f7e095e995634305a33b28bd8638366056f877109ffc290d06d341950",
+    "size": 4513594,
+    "publishedAt": "2026-11-22T11:10:50Z",
+    "result": "CACHE"
+  },
+  "changes": {
+    "changedStandings": [],
+    "newStandings": [],
+    "newSeasons": [],
+    "newEvents": [],
+    "newlyCompleted": [],
+    "changedDates": [],
+    "changedResults": [],
+    "newFinalSessions": []
+  },
+  "audit": {
+    "issues": 0,
+    "countbackCandidates": 3,
+    "knownPointExceptions": 20,
+    "totals": {
+      "events": 526,
+      "completed": 524,
+      "raceSessions": 524,
+      "raceRows": 11024,
+      "raceWins": 524,
+      "podiumRows": 1572,
+      "fastestLapRecords": 523,
+      "qualifyingSessions": 524,
+      "qualifyingRows": 10999,
+      "qualifyingLeaders": 524,
+      "standingSnapshots": 1048,
+      "pointComparisons": 17142,
+      "sprintSessions": 30,
+      "sprintRows": 612,
+      "missingFastestLapRecords": 1,
+      "sprint_qualifyingSessions": 24,
+      "sprint_qualifyingRows": 488,
+      "notCompleted": 2
+    }
+  },
+  "independentVerification": "pending",
+  "candidateSha256": "cdb48c40d46ba7f852752b9fb694e0cf80160e3b8bb2923b7346f5d8d2c01a42",
+  "testScope": "offline actual archive replay; change-summary fields checked separately against generated candidate"
+}
