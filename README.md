@@ -54,3 +54,5 @@ See [F1-006.4](docs/F1_006_4.md). Branch pushes can run the read-only GitHub Act
 
 F1-006.5: постоянное DRAFT-хранилище `f1-data` (явный bootstrap, история Git,
 без публикации сайта) — [инструкция](docs/F1_006_5.md).
+
+F1-006.6A: `python tools/prepare_publication.py build --output private/publication-local-001` assembles a DRAFT review site from the persistent remote f1-data; `python tools/prepare_publication.py verify --bundle private/publication-local-001` checks integrity. No publication authorization or deployment. See `docs/F1_006_6A.md`.

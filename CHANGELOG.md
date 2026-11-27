@@ -83,3 +83,8 @@
 - F1-006.4.1: облачный hotfix bbe01b5 успешен (2m09s, скриншот пользователя).
 - Добавлены отдельная ветка f1-data, явный bootstrap, проверенный манифест, чтение последнего сохранённого DRAFT и CAS-запись через Git с историей.
 - Workflow сохраняет спортивные изменения; прежняя база не меняется при no_change или блокировке. Нет публикации Pages. См. docs/F1_006_5.md.
+
+## F1-006.6A
+- Exact DRAFT site bundle from persistent f1-data, audited before assembly, byte-identical official.json, allowlisted files and SHA-256 report, explicit blocked publication state.
+- Read-only cloud site-rehearsal tied to successful persistence commit/hash and checked-out web assets; temporary review artifact, no Pages deployment.
+- Visible F1DB / CC BY 4.0 attribution. 14 new tests; 189 Python / 44 JS passing locally.

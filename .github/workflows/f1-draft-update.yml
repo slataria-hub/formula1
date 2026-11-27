@@ -12,6 +12,9 @@ concurrency:
   cancel-in-progress: false
 jobs:
   draft:
+    outputs:
+      data_commit: ${{ steps.persisted.outputs.data_commit }}
+      official_sha: ${{ steps.persisted.outputs.official_sha }}
     permissions:
       contents: write
     runs-on: ubuntu-24.04
@@ -35,6 +38,21 @@ jobs:
           F1DB_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           F1_DATA_GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: .venv/bin/python tools/persist_draft.py update --output private/cloud-run
+      - name: Bind stored version for site rehearsal
+        id: persisted
+        run: |
+          .venv/bin/python - <<'PYCODE'
+          import json, os, re
+          from pathlib import Path
+          r = json.loads(Path('private/cloud-run/reports/persistence.json').read_text())
+          if r['status'] not in ('stored', 'no_change') or r['publicationAuthorized'] is not False:
+              raise SystemExit('Unexpected DRAFT persistence result')
+          for name, key, length in [('data_commit', 'afterCommit', 40), ('official_sha', 'officialSha256', 64)]:
+              if not re.fullmatch('[0-9a-f]{'+str(length)+'}', r[key]):
+                  raise SystemExit('Invalid digest')
+              with open(os.environ['GITHUB_OUTPUT'], 'a') as out:
+                  print(name+'='+r[key], file=out)
+          PYCODE
       - name: Upload diagnostic reports (no user data)
         if: always()
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
@@ -53,5 +71,39 @@ jobs:
         with:
           name: f1-draft-candidate-${{ github.run_id }}-${{ github.run_attempt }}
           path: private/cloud-run/reports/update/candidate.json
+          if-no-files-found: error
+          retention-days: 14
+  site-rehearsal:
+    needs: draft
+    permissions:
+      contents: read
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+      - name: Install Python dependencies
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install -r requirements.txt
+      - name: Assemble exact DRAFT site (deployment blocked)
+        env:
+          F1_DATA_GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          EXPECTED_COMMIT: ${{ needs.draft.outputs.data_commit }}
+          EXPECTED_SHA: ${{ needs.draft.outputs.official_sha }}
+        run: |
+          test -n "$EXPECTED_COMMIT" && test -n "$EXPECTED_SHA"
+          .venv/bin/python tools/prepare_publication.py build --output private/publication-rehearsal --expected-commit "$EXPECTED_COMMIT" --expected-sha "$EXPECTED_SHA" --code-commit "$GITHUB_SHA"
+      - name: Verify exact site bundle
+        env:
+          EXPECTED_COMMIT: ${{ needs.draft.outputs.data_commit }}
+          EXPECTED_SHA: ${{ needs.draft.outputs.official_sha }}
+        run: .venv/bin/python tools/prepare_publication.py verify --bundle private/publication-rehearsal --expected-commit "$EXPECTED_COMMIT" --expected-sha "$EXPECTED_SHA"
+      - name: Upload DRAFT site for review (not Pages)
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: f1-draft-site-${{ github.run_id }}-${{ github.run_attempt }}
+          path: private/publication-rehearsal/
           if-no-files-found: error
           retention-days: 14

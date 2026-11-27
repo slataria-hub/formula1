@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "status": "draft_bundle_ready",
+  "publicationAuthorized": false,
+  "independentVerification": "pending",
+  "blockers": [
+    "independent historical acceptance pending",
+    "visual acceptance of exact build pending",
+    "explicit publication approval absent",
+    "deployment and remote rollback not enabled"
+  ],
+  "dataCommit": "8025b843d87654c4cc3729c5add0f85f08d23c94",
+  "codeCommit": "a05c764f9dee3948ff0374f8f88371267340e36e",
+  "dataManifest": {
+    "attribution": "F1DB (https://github.com/f1db/f1db), CC BY 4.0; transformed by F1 Analytics",
+    "datasetStatus": "draft",
+    "independentVerification": "pending",
+    "officialSha256": "32cd3fb8823918575a8ae0f523b4468b8b9d3cf14a7be870a3452898d9fc9fda",
+    "parentCommit": null,
+    "publicationAuthorized": false,
+    "release": {
+      "sha256": "8c33f41f7e095e995634305a33b28bd8638366056f877109ffc290d06d341950",
+      "tag": "v2026.21.0"
+    },
+    "sportsSha256": "6433d246464a8980e2f17c92b4aff02ca12c9052c026c8bdb328f7c791662a46",
+    "storedAt": "2026-11-27T17:34:41.468848+00:00",
+    "version": 1
+  },
+  "officialSha256": "32cd3fb8823918575a8ae0f523b4468b8b9d3cf14a7be870a3452898d9fc9fda",
+  "release": {
+    "tag": "v2026.21.0",
+    "sha256": "8c33f41f7e095e995634305a33b28bd8638366056f877109ffc290d06d341950"
+  },
+  "seasons": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+  ],
+  "events": 526,
+  "audit": {
+    "issues": 0,
+    "countbackCandidates": 3
+  },
+  "files": {
+    "index.html": {
+      "sha256": "0db6abdfe0f376140e0ad07ab066be920dc2cb018e8a18e547c09bfe0331c72d",
+      "bytes": 848
+    },
+    "style.css": {
+      "sha256": "9d779fec670050181f84713ffbf6865869704cfaa0adadfb9259de8409a01f75",
+      "bytes": 22433
+    },
+    "app.mjs": {
+      "sha256": "1368465232bcf53f10ce95ad34bca252313798f8ef5806bc9a4652659d1bc96c",
+      "bytes": 32337
+    },
+    "model.mjs": {
+      "sha256": "6956f7273d6e67d983e921262909db27f732364feb7d452cec41d1741f462e0f",
+      "bytes": 7552
+    },
+    "user.mjs": {
+      "sha256": "c20fddb3e6acd3442f1100721aac2ccb7fde30a33d15471f8203053a5ecac80e",
+      "bytes": 5571
+    },
+    "championship.mjs": {
+      "sha256": "762b73fa5144c28bdd78930d95440c09e621d07fc4e58802d7915bd4b43d8bb2",
+      "bytes": 22266
+    },
+    "official.json": {
+      "sha256": "32cd3fb8823918575a8ae0f523b4468b8b9d3cf14a7be870a3452898d9fc9fda",
+      "bytes": 16611026
+    },
+    "SOURCE.txt": {
+      "sha256": "e227c269f7adee093497cb84aef12201a30cfe5f710e724b2b76e2c45351308d",
+      "bytes": 242
+    }
+  }
+}

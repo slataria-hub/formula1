@@ -247,3 +247,5 @@ select#h2hSelectA,select#h2hSelectB{background:var(--sf)!important;color:var(--t
 .chance-notes ul{margin:8px 0 0;padding-left:20px;color:var(--mu)}
 .chance-notes li{margin:6px 0}
 @media(max-width:650px){.chance-controls{align-items:stretch}.chance-controls label,.chance-controls button{width:100%;min-width:0}.chance-summary{grid-template-columns:repeat(2,minmax(0,1fr))}.chance-pct{font-size:14px}}
+
+.preview-note a{color:inherit;text-decoration:underline;text-underline-offset:2px}
