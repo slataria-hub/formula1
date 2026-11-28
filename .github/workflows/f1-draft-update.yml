@@ -1,10 +1,13 @@
-name: F1 DRAFT update (no publication)
+name: F1 DRAFT update (read-only rehearsal; no publication)
+# F1-012.3: no push/schedule triggers, no remote writes or artifact uploads.
+# Prior persist_draft.py update remains available for a separately authorized stage.
 on:
-  push:
-    branches: [feature/f1-002-historical-import]
   workflow_dispatch:
-  schedule:
-    - cron: '23 5,17 * * *'
+    inputs:
+      check_upstream:
+        description: Check new F1DB release in disposable rehearsal (no persistence)
+        type: boolean
+        default: false
 permissions:
   contents: read
 concurrency:
@@ -12,98 +15,43 @@ concurrency:
   cancel-in-progress: false
 jobs:
   draft:
-    outputs:
-      data_commit: ${{ steps.persisted.outputs.data_commit }}
-      official_sha: ${{ steps.persisted.outputs.official_sha }}
-    permissions:
-      contents: write
-    runs-on: ubuntu-24.04
-    timeout-minutes: 25
-    env:
-      PYTHONUNBUFFERED: '1'
-    steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-        with:
-          persist-credentials: false
-      - name: Install Python dependencies
-        run: |
-          python3 -m venv .venv
-          .venv/bin/python -m pip install -r requirements.txt
-      - name: Run tests
-        run: |
-          .venv/bin/python -m unittest discover -s tests -v
-          node --test tests/*.mjs
-      - name: Verify and persist DRAFT update
-        env:
-          F1DB_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          F1_DATA_GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: .venv/bin/python tools/persist_draft.py update --output private/cloud-run
-      - name: Bind stored version for site rehearsal
-        id: persisted
-        run: |
-          .venv/bin/python - <<'PYCODE'
-          import json, os, re
-          from pathlib import Path
-          r = json.loads(Path('private/cloud-run/reports/persistence.json').read_text())
-          if r['status'] not in ('stored', 'no_change') or r['publicationAuthorized'] is not False:
-              raise SystemExit('Unexpected DRAFT persistence result')
-          for name, key, length in [('data_commit', 'afterCommit', 40), ('official_sha', 'officialSha256', 64)]:
-              if not re.fullmatch('[0-9a-f]{'+str(length)+'}', r[key]):
-                  raise SystemExit('Invalid digest')
-              with open(os.environ['GITHUB_OUTPUT'], 'a') as out:
-                  print(name+'='+r[key], file=out)
-          PYCODE
-      - name: Upload diagnostic reports (no user data)
-        if: always()
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
-        with:
-          name: f1-draft-reports-${{ github.run_id }}-${{ github.run_attempt }}
-          path: |
-            private/cloud-run/reports/cloud-summary.json
-            private/cloud-run/reports/activation.json
-            private/cloud-run/reports/persistence.json
-            private/cloud-run/reports/update/*-report.json
-          if-no-files-found: warn
-          retention-days: 14
-      - name: Upload validated DRAFT candidate
-        if: success()
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
-        with:
-          name: f1-draft-candidate-${{ github.run_id }}-${{ github.run_attempt }}
-          path: private/cloud-run/reports/update/candidate.json
-          if-no-files-found: error
-          retention-days: 14
-  site-rehearsal:
-    needs: draft
+    if: github.ref == 'refs/heads/main'
     permissions:
       contents: read
     runs-on: ubuntu-24.04
-    timeout-minutes: 15
+    timeout-minutes: 30
+    env:
+      PYTHONUNBUFFERED: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+      F1_PUBLIC_PROFILE: circuits-only # public source mirror only; local tests use full flags
     steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-      - name: Install Python dependencies
-        run: |
-          python3 -m venv .venv
-          .venv/bin/python -m pip install -r requirements.txt
-      - name: Assemble exact DRAFT site (deployment blocked)
-        env:
-          F1_DATA_GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          EXPECTED_COMMIT: ${{ needs.draft.outputs.data_commit }}
-          EXPECTED_SHA: ${{ needs.draft.outputs.official_sha }}
-        run: |
-          test -n "$EXPECTED_COMMIT" && test -n "$EXPECTED_SHA"
-          .venv/bin/python tools/prepare_publication.py build --output private/publication-rehearsal --expected-commit "$EXPECTED_COMMIT" --expected-sha "$EXPECTED_SHA" --code-commit "$GITHUB_SHA"
-      - name: Verify exact site bundle
-        env:
-          EXPECTED_COMMIT: ${{ needs.draft.outputs.data_commit }}
-          EXPECTED_SHA: ${{ needs.draft.outputs.official_sha }}
-        run: .venv/bin/python tools/prepare_publication.py verify --bundle private/publication-rehearsal --expected-commit "$EXPECTED_COMMIT" --expected-sha "$EXPECTED_SHA"
-      - name: Upload DRAFT site for review (not Pages)
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:
-          name: f1-draft-site-${{ github.run_id }}-${{ github.run_attempt }}
-          path: private/publication-rehearsal/
-          if-no-files-found: error
-          retention-days: 14
+          python-version: '3.13.18'
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '22.23.5'
+          package-manager-cache: false
+      - name: Install and verify dependencies
+        run: |
+          python -m pip install --require-hashes --only-binary=:all: -r requirements-pages.lock
+          python -m pip check
+          python tools/repository_audit.py tracked
+      - name: Targeted unit checks (not F1-008)
+        run: |
+          for test in test_static_build.py test_prepare_publication.py test_preview_build.py test_prepare_update.py test_sync_media.py test_collect_media.py test_activate_update.py test_persist_draft.py test_release_store.py test_repository_audit.py test_ci_rehearsal.py; do
+            python -m unittest discover -s tests -p "$test" -v
+          done
+          node --test tests/*.mjs
+      - name: DATA — verify stored DRAFT and optionally rehearse new release
+        env:
+          CHECK_UPSTREAM: ${{ inputs.check_upstream }}
+          F1DB_GITHUB_TOKEN: ${{ github.token }}
+        run: python tools/ci_rehearsal.py data --output private/ci-rehearsal
+      - name: MEDIA — verify synthetic MEDIA only (real media remains offline)
+        run: python tools/ci_rehearsal.py media --output private/ci-rehearsal
+      - name: BUILD — assemble and verify exact stored DRAFT (no upload)
+        run: python tools/ci_rehearsal.py build --output private/ci-rehearsal

@@ -1,0 +1,161 @@
+[
+  {
+    "id": "f1db:hrt",
+    "file": "Hispania Racing F1 Team.svg",
+    "years": [
+      2010
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Hispania_Racing_F1_Team.svg",
+    "review": "Local DRAFT only; HRT mark sourced from its former official website; original upload July 2011; 2010 variant unverified; visual, season and rights review required before publication",
+    "evidence": [],
+    "periodStatus": "provisional_representative"
+  },
+  {
+    "id": "f1db:aston-martin",
+    "file": "Aston Martin F1 Team logo 2024.jpg",
+    "years": [
+      2021,
+      2022,
+      2023
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Aston_Martin_F1_Team_logo_2024.jpg",
+    "review": "Local DRAFT only; Previously downloaded 2024 team mark; not the exact earlier sponsor variant; author and trademark review pending; visual, season and rights review required before publication",
+    "evidence": [],
+    "periodStatus": "provisional_representative"
+  },
+  {
+    "id": "f1db:sauber",
+    "file": "Logo Sauber F1.png",
+    "years": [
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Logo_Sauber_F1.png",
+    "review": "Local DRAFT only; Previously downloaded team symbol, Commons file dated 2016; exact earlier team designs not established; visual, season and rights review required before publication",
+    "evidence": [
+      "https://www.formula1.com/en/latest/article/saubers-best-moments-and-most-memorable-liveries-in-f1.6OIgJH4jiY29sJIHNFrG1W.6OIgJH4jiY29sJIHNFrG1W"
+    ],
+    "periodStatus": "provisional_representative"
+  },
+  {
+    "id": "f1db:sauber",
+    "file": "Sauber F1 Team logo.svg",
+    "years": [
+      2018
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Sauber_F1_Team_logo.svg",
+    "review": "Local DRAFT only; Previously downloaded team mark sourced from formula1.com in 2017; no Alfa Romeo sponsor claim for 2018; visual, season and rights review required before publication",
+    "evidence": [],
+    "periodStatus": "provisional_representative"
+  },
+  {
+    "id": "f1db:benetton",
+    "file": "United Colors of Benetton - logo (Italy, 1996-2011).svg",
+    "years": [
+      2000,
+      2001
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:United_Colors_of_Benetton_-_logo_%28Italy%2C_1996-2011%29.svg",
+    "review": "Local DRAFT only; Dated parent brand wordmark; Commons description identifies both Benetton Group and Benetton Formula Ltd.; not the dedicated Formula team logo; visual, season and rights review required before publication",
+    "evidence": [
+      "https://www.benettongroup.com/en/media-press/press-releases-and-statements/benetton-formula-the-essence-of-color-in-motion/"
+    ],
+    "periodStatus": "manufacturer_brand"
+  },
+  {
+    "id": "f1db:jaguar",
+    "file": "Jaguar 2001 wordmark.svg",
+    "years": [
+      2001,
+      2002,
+      2003,
+      2004
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Jaguar_2001_wordmark.svg",
+    "review": "Local DRAFT only; Jaguar Cars Ltd. 2001 wordmark; not the Jaguar Racing F1 team logo and not Formula E; exact use on the F1 team not established; visual, season and rights review required before publication",
+    "evidence": [],
+    "periodStatus": "manufacturer_brand"
+  },
+  {
+    "id": "f1db:alfa-romeo",
+    "file": "Alfa Romeo badge.jpg",
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Alfa_Romeo_badge.jpg",
+    "review": "Local DRAFT only; Photo of manufacturer badge on Alfa Romeo 4C, 2015, Petar Milosevic, CC BY-SA 4.0; not an F1 team or sponsor logo; period-specific badge not established; visual, season and rights review required before publication",
+    "evidence": [],
+    "periodStatus": "manufacturer_brand"
+  },
+  {
+    "id": "f1db:red-bull",
+    "file": "Logo of Red bull.svg",
+    "years": [
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Logo_of_Red_bull.svg",
+    "review": "Local DRAFT only; Red Bull GmbH wordmark, official brand website source dated 2022; not the Red Bull Racing team logo; provisional brand identifier only; visual, season and rights review required before publication",
+    "evidence": [],
+    "periodStatus": "manufacturer_brand"
+  },
+  {
+    "id": "f1db:renault",
+    "file": "Renault 1992-2004 logo.png",
+    "years": [
+      2002,
+      2003
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Renault_1992-2004_logo.png",
+    "review": "Local DRAFT only; Commons user reconstruction of Renault manufacturer mark labelled 1992–2004; no dedicated F1 sponsor mark; rights and historical fidelity pending; visual, season and rights review required before publication",
+    "evidence": [],
+    "periodStatus": "manufacturer_brand"
+  },
+  {
+    "id": "f1db:renault",
+    "file": "Renault logo.svg",
+    "years": [
+      2004,
+      2005,
+      2006
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Renault_logo.svg",
+    "review": "Local DRAFT only; Commons identifies Renault S.A. manufacturer logo 2004–2006; not dedicated F1 team logo; visual, season and rights review required before publication",
+    "evidence": [],
+    "periodStatus": "manufacturer_brand"
+  },
+  {
+    "id": "f1db:renault",
+    "file": "Renault 2009 logo.svg",
+    "years": [
+      2007,
+      2008,
+      2009,
+      2010,
+      2011
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Renault_2009_logo.svg",
+    "review": "Local DRAFT only; Commons labels manufacturer emblem 2007–2015; source dated 2009; not dedicated F1 team logo; 2007–08 variant needs review; visual, season and rights review required before publication",
+    "evidence": [],
+    "periodStatus": "manufacturer_brand"
+  }
+]

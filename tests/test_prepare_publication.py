@@ -22,14 +22,17 @@ class PublicationTests(unittest.TestCase):
         e=self.data['events'][0]; e.update(status='scheduled',externalEventId='f1db:race-1',grandPrixKey='f1db:gp-1'); e['sessions'][0].update(status='scheduled',results=[])
         self.raw=json_bytes(self.data); self.meta=manifest(self.raw,SEED,None); self.head='1'*40
         self.store=Mock(); self.store.load.return_value=(self.head,self.raw,self.meta); self.store.remote_head.return_value=self.head
-    def build(self,**kw): return p.prepare(self.store,self.out,**kw)
+    def build(self,**kw): return p.prepare(self.store,self.out,**{"synthetic":True, **kw})
     def verify(self,**kw): return p.verify_bundle(self.out,**kw)
     def mutate_report(self,**kw):
         f=self.out/'publication-report.json'; r=parse(f.read_bytes()); r.update(kw); f.write_bytes(json_bytes(r))
     def test_exact_bundle(self):
-        r=self.build(expected_commit=self.head,expected_sha=digest(self.raw)); self.assertEqual(self.verify(),r)
+        r=self.build(expected_commit=self.head,expected_sha=digest(self.raw)); self.assertEqual(self.verify(),r); self.assertTrue(r['build']['syntheticMediaOnly']); self.assertEqual(r['build']['sportingDataStatus'],'draft'); self.assertIn('not imply private',r['build']['visibility'])
         self.assertEqual((self.out/'site/official.json').read_bytes(),self.raw); self.assertFalse(r['publicationAuthorized']); self.assertEqual(set(r['files']),p.SITE_FILES)
         self.assertIn('CC BY 4.0',(self.out/'site/SOURCE.txt').read_text()); self.store.save.assert_not_called()
+    def test_no_implicit_empty_media(self):
+        with self.assertRaisesRegex(ValueError,'explicit media required'): self.build(synthetic=False)
+        self.assertFalse(self.out.exists())
     def test_data_advanced(self):
         with self.assertRaisesRegex(ValueError,'advanced'): self.build(expected_commit='2'*40)
         self.assertFalse(self.out.exists())

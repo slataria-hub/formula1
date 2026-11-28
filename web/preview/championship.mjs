@@ -372,3 +372,29 @@ export function simulateChampionship(m, season, options = {}) {
     warnings
   };
 }
+
+// Conservative UI-only title marker: no Monte Carlo, no assumed roster, no countback guess.
+// Only latest published standings can receive a marker; earlier snapshots must not leak the final champion.
+export function standingTitle(m, season, kind, snapshot) {
+  if (!snapshot || snapshot!==m.standing(season,kind)) return null;
+  const events=m.eventsOf(season).filter(e=>e.status!=='cancelled');
+  if (!events.length) return null;
+  const leader=snapshot.rows.find(r=>r.position===1);
+  if (!leader || snapshot.rows.filter(r=>r.position===1).length!==1 || !finite(leader.points)) return null;
+  const completed=events.filter(e=>e.status==='completed' && sessionOf(e,'race')?.status==='final');
+  if (!completed.length || snapshot.afterRound!==Math.max(...completed.map(e=>e.round))) return null;
+  if (events.every(e=>completed.includes(e)&&!e.sessions.some(s=>s.kind==='sprint'&& !['final','cancelled'].includes(s.status)))) return {id:leader.entrantId||leader.entityId,status:'final'};
+  if (season<2000 || !scoringRulesForSeason(season).verifiedProfile) return null;
+  const rules=scoringRulesForSeason(season), remaining=remainingSessions(m,season);
+  if (remaining.blockers.length || !remaining.sessions.length) return null;
+  // Missing race/sprint results must not silently lower the maximum.
+  if (events.some(e=>!completed.includes(e)&&(e.status!=='scheduled'||sessionOf(e,'race')?.status!=='scheduled'||sessionOf(e,'race')?.results?.length!==0))) return null;
+  if (events.some(e=>e.sessions.some(s=>s.kind==='sprint'&&(completed.includes(e)?!['final','cancelled'].includes(s.status):!['scheduled','cancelled'].includes(s.status)||s.status==='scheduled'&&s.results?.length!==0)))) return null;
+  if (remaining.sessions.some(x=>x.event.round<=snapshot.afterRound)) return null;
+  const lastRound=Math.max(...events.map(e=>e.round));
+  const maximum=remaining.sessions.reduce((sum,item)=>sum+(kind==='drivers'?sessionMaxForDriver(item,rules,lastRound):sessionMaxForConstructor(item,rules,lastRound,2)),0);
+  const rivals=snapshot.rows.filter(r=>r!==leader);
+  if (rivals.some(r=>!finite(r.points)))return null;
+  // Include a potential new entry starting from zero, and all rivals regardless of latest roster.
+  return leader.points>maximum && rivals.every(r=>leader.points>r.points+maximum)?{id:leader.entrantId||leader.entityId,status:'clinched'}:null;
+}

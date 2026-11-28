@@ -1,0 +1,167 @@
+[
+  {
+    "id": "f1db:williams",
+    "file": "Logo Williams F1.png",
+    "years": [
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Logo_Williams_F1.png",
+    "periodStatus": "provisional_representative",
+    "review": "Local DRAFT only. Team mark as uploaded 2016 and recolored 2021; NOT the historical 2000–2013 sponsor marks. Rights and visual review required before publication."
+  },
+  {
+    "id": "f1db:sauber",
+    "file": "Logo Sauber F1.png",
+    "years": [
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Logo_Sauber_F1.png",
+    "periodStatus": "provisional_representative",
+    "review": "Local DRAFT only. Previously successfully downloaded 2016 team mark; not the Sauber Petronas period mark. Rights and visual review required before publication."
+  },
+  {
+    "id": "f1db:jaguar",
+    "file": "Jaguar 1982 wordmark.svg",
+    "years": [
+      2000
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Jaguar_1982_wordmark.svg",
+    "periodStatus": "manufacturer_brand",
+    "review": "Local DRAFT only. Jaguar Cars 1982 wordmark, not a team logo; exact use in 2000 not verified. Rights and visual review required before publication."
+  },
+  {
+    "id": "f1db:toro-rosso",
+    "file": "F1 Team Icon - Toro Rosso(2009).svg",
+    "years": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:F1_Team_Icon_-_Toro_Rosso%282009%29.svg",
+    "periodStatus": "fan_icon",
+    "review": "Local DRAFT only. User-created representative icon dated July 2009; not an official logo. Rights and visual review required before publication."
+  },
+  {
+    "id": "f1db:bar",
+    "file": "BAR garage.jpg",
+    "years": [
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:BAR_garage.jpg",
+    "periodStatus": "historical_photo",
+    "review": "Local DRAFT only. Photograph of BAR garage, US GP 2005; no claim of season-specific logo. Rights and visual review required before publication."
+  },
+  {
+    "id": "f1db:jordan",
+    "file": "Jordan overall.jpg",
+    "years": [
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Jordan_overall.jpg",
+    "periodStatus": "historical_photo",
+    "review": "Local DRAFT only. Photograph of Jordan Grand Prix overalls in 2006 exhibition; no claim of season-specific logo. Rights and visual review required before publication."
+  },
+  {
+    "id": "f1db:alphatauri",
+    "file": "Alpha Tauri F1 Team Garage, British GP, Silverstone 2021 (51349286631).jpg",
+    "years": [
+      2020,
+      2021,
+      2022,
+      2023
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Alpha_Tauri_F1_Team_Garage%2C_British_GP%2C_Silverstone_2021_%2851349286631%29.jpg",
+    "periodStatus": "historical_photo",
+    "review": "Local DRAFT only. Photograph of 2021 British GP team garage; not a standalone official logo. Rights and visual review required before publication."
+  },
+  {
+    "id": "f1db:rb",
+    "file": "RB VCARB01 2024 Chinese GP.jpg",
+    "years": [
+      2024
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:RB_VCARB01_2024_Chinese_GP.jpg",
+    "periodStatus": "historical_photo",
+    "review": "Local DRAFT only. Photograph of RB VCARB 01, 2024 Chinese GP. Rights and visual review required before publication."
+  },
+  {
+    "id": "f1db:racing-bulls",
+    "file": "FIA F1 Austria 2025 Nr. 30 Lawson.jpg",
+    "years": [
+      2025
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:FIA_F1_Austria_2025_Nr._30_Lawson.jpg",
+    "periodStatus": "historical_photo",
+    "review": "Local DRAFT only. Photograph of Liam Lawson Racing Bulls 2025 Austrian GP. Rights and visual review required before publication."
+  },
+  {
+    "id": "f1db:racing-bulls",
+    "file": "2026 Chinese GP - Racing Bulls - Liam Lawson - Qualifying.jpg",
+    "years": [
+      2026
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:2026_Chinese_GP_-_Racing_Bulls_-_Liam_Lawson_-_Qualifying.jpg",
+    "periodStatus": "historical_photo",
+    "review": "Local DRAFT only. Photograph of Liam Lawson Racing Bulls 2026 Chinese GP qualifying. Rights and visual review required before publication."
+  },
+  {
+    "id": "f1db:virgin",
+    "file": "Virgin Racing sidepod.jpg",
+    "years": [
+      2010,
+      2011
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Virgin_Racing_sidepod.jpg",
+    "periodStatus": "historical_photo",
+    "review": "Local DRAFT only. Photograph of Virgin Racing sidepod 2010; not exact 2011 livery. Rights and visual review required before publication."
+  },
+  {
+    "id": "f1db:spyker",
+    "file": "Spyker F8-VII.jpg",
+    "years": [
+      2007
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Spyker_F8-VII.jpg",
+    "periodStatus": "historical_photo",
+    "review": "Local DRAFT only. Photograph of 2007 Spyker F8-VII; not 2006 Spyker MF1 logo. Rights and visual review required before publication."
+  }
+]

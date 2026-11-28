@@ -1,0 +1,12 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {buildModel,seasonPairs,pairTimeline,headToHeadResult,pairKey} from '../web/preview/model.mjs';
+const fixture=()=>{const d=JSON.parse(readFileSync(new URL('../examples/synthetic-dataset.json',import.meta.url)));d.datasetStatus='draft';return d;};
+const run=d=>{const m=buildModel(d),p=seasonPairs(m,2026)[0];return {m,p,t:pairTimeline(m,2026,p)};};
+test('cumulative totals agree with season scores; sprint independent',()=>{const d=fixture(),e=d.events[0],r=e.sessions[0];e.sessions.push({...r,kind:'sprint',results:r.results.map((x,i)=>({...x,position:2-i}))});const {p,t}=run(d);assert.equal(p.race.a,1);assert.equal(p.sprint.b,1);assert.deepEqual(t.rows[0].race.total,p.race);assert.deepEqual(t.totals.sprint,p.sprint);});
+test('future and non-final sessions do not count',()=>{const d=fixture(),e=d.events[0];e.sessions.push({...e.sessions[0],kind:'qualifying',status:'provisional'});d.events.push({...e,id:'future',round:2,status:'scheduled'});const {p,t}=run(d);assert.equal(p.qualifying.a,0);assert.equal(t.rows.length,1);assert.equal(t.rows[0].qualifying.outcome,'absent');});
+test('duplicate row and contradictory DSQ are excluded',()=>{const d=fixture(),s=d.events[0].sessions[0];s.results.push({...s.results[0]});const {p}=run(d);assert.equal(p.race.skipped,1);s.results.pop();s.results[0].status='dsq';assert.equal(run(d).p.race.skipped,1);});
+test('constructor boundary remains separate even if entrant id reused',()=>{const d=fixture(),rs=d.events[0].sessions[0].results;rs.forEach(r=>r.entrantId='shared');rs[1].constructorId='other';assert.deepEqual(seasonPairs(buildModel(d),2026),[]);});
+test('tie, absence and later victory preserve cumulative order',()=>{const d=fixture(),e=d.events[0];const clone=(round)=>({...structuredClone(e),id:'r'+round,round});const e2=clone(2),e3=clone(3),e4=clone(4);e2.sessions[0].results[1].position=1;e3.sessions[0].results.pop();e4.sessions[0].results[0].position=2;e4.sessions[0].results[1].position=1;d.events.push(e4,e3,e2);const {p,t}=run(d);assert.deepEqual(t.rows.map(r=>r.race.outcome),['a','tie','absent','b']);assert.deepEqual(p.race,{a:1,b:1,tie:1,skipped:0});assert.equal(t.rows[2].race.total.a,1);});
+test('pair identity includes entry and constructor',()=>{const {p}=run(fixture());assert.notEqual(pairKey(p),pairKey({...p,entrantId:'other'}));assert.notEqual(pairKey(p),pairKey({...p,constructorId:'other'}));});

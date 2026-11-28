@@ -1,0 +1,65 @@
+[
+  {
+    "id": "f1db:brawn",
+    "file": "Brawn GP logo.svg",
+    "years": [
+      2009
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Brawn_GP_logo.svg",
+    "review": "local preview only; file description/date checked; verify trademark and appearance before publication"
+  },
+  {
+    "id": "f1db:caterham",
+    "file": "Caterham F1 Team logo (2014).svg",
+    "years": [
+      2014
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Caterham_F1_Team_logo_%282014%29.svg",
+    "review": "local preview only; file description/date checked; verify trademark and appearance before publication"
+  },
+  {
+    "id": "f1db:alfa-romeo",
+    "file": "Alfa Romeo F1 Team Stake Logo.svg",
+    "years": [
+      2023
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Alfa_Romeo_F1_Team_Stake_Logo.svg",
+    "review": "local preview only; file description/date checked; verify trademark and appearance before publication"
+  },
+  {
+    "id": "f1db:mercedes",
+    "file": "Mercedes-AMG Petronas F1 Team logo (2026).svg",
+    "years": [
+      2026
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Mercedes-AMG_Petronas_F1_Team_logo_%282026%29.svg",
+    "review": "local preview only; file description/date checked; verify trademark and appearance before publication"
+  },
+  {
+    "id": "f1db:haas",
+    "file": "TGR Haas F1 Team Logo (2026).svg",
+    "years": [
+      2026
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:TGR_Haas_F1_Team_Logo_%282026%29.svg",
+    "review": "local preview only; file description/date checked; verify trademark and appearance before publication"
+  },
+  {
+    "id": "f1db:mclaren",
+    "file": "McLaren logo (2026).svg",
+    "years": [
+      2026
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:McLaren_logo_%282026%29.svg",
+    "review": "local preview only; file description/date checked; verify trademark and appearance before publication"
+  },
+  {
+    "id": "f1db:williams",
+    "file": "Atlassian Williams F1 Team logo.svg",
+    "years": [
+      2026
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Atlassian_Williams_F1_Team_logo.svg",
+    "review": "local preview only; file description/date checked; verify trademark and appearance before publication"
+  }
+]

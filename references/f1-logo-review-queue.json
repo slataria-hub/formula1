@@ -1,0 +1,1454 @@
+[
+  {
+    "id": "f1db:alfa-romeo",
+    "team": "Alfa Romeo",
+    "seasonYears": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ],
+    "article": "https://en.wikipedia.org/wiki/Alfa_Romeo_in_Formula_One",
+    "candidateFiles": [
+      {
+        "file": "Alfa Romeo F1 Team Stake Logo.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:Alfa_Romeo_F1_Team_Stake_Logo.svg"
+      },
+      {
+        "file": "Alfa Romeo 1900 SS Touring 1957 Logo.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Alfa_Romeo_1900_SS_Touring_1957_Logo.jpg"
+      },
+      {
+        "file": "The Alfa Romeo logo on the nose of the 1980 Alfa Romeo 179 F1 car (14685227843).jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:The_Alfa_Romeo_logo_on_the_nose_of_the_1980_Alfa_Romeo_179_F1_car_%2814685227843%29.jpg"
+      },
+      {
+        "file": "2023 Stake F1 Team Kick Sauber logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:2023_Stake_F1_Team_Kick_Sauber_logo.png"
+      },
+      {
+        "file": "Logo of Stake F1 Team Kick Sauber.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Logo_of_Stake_F1_Team_Kick_Sauber.png"
+      },
+      {
+        "file": "Alfa Rome-logo.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Alfa_Rome-logo.jpg"
+      }
+    ],
+    "approvedYears": []
+  },
+  {
+    "id": "f1db:alphatauri",
+    "team": "AlphaTauri",
+    "seasonYears": [
+      2020,
+      2021,
+      2022,
+      2023
+    ],
+    "article": "https://en.wikipedia.org/wiki/Scuderia_AlphaTauri",
+    "candidateFiles": [
+      {
+        "file": "Original RB Studios logo, March 1991.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Original_RB_Studios_logo%2C_March_1991.png"
+      },
+      {
+        "file": "RB Logo 2018 07.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:RB_Logo_2018_07.svg"
+      },
+      {
+        "file": "Drittes Fernsehprogramm NDR-RB-SFB Logo (1965 bis 1988).svg",
+        "source": "https://commons.wikimedia.org/wiki/File:Drittes_Fernsehprogramm_NDR-RB-SFB_Logo_%281965_bis_1988%29.svg"
+      },
+      {
+        "file": "RB-Logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:RB-Logo.png"
+      },
+      {
+        "file": "RB Logo.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:RB_Logo.svg"
+      },
+      {
+        "file": "RB Main Logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:RB_Main_Logo.png"
+      }
+    ],
+    "approvedYears": []
+  },
+  {
+    "id": "f1db:alpine",
+    "team": "Alpine",
+    "seasonYears": [
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "article": "https://en.wikipedia.org/wiki/Alpine_F1_Team",
+    "candidateFiles": [
+      {
+        "file": "Alpine F1 Team Logo.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:Alpine_F1_Team_Logo.svg"
+      },
+      {
+        "file": "Logo of alpine f1 team 2022.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Logo_of_alpine_f1_team_2022.png"
+      },
+      {
+        "file": "BWT Alpine F1 Team Logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:BWT_Alpine_F1_Team_Logo.png"
+      },
+      {
+        "file": "Alpine logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Alpine_logo.png"
+      },
+      {
+        "file": "Alpine Logo.JPG",
+        "source": "https://commons.wikimedia.org/wiki/File:Alpine_Logo.JPG"
+      },
+      {
+        "file": "Renault Alpine Logo.JPG",
+        "source": "https://commons.wikimedia.org/wiki/File:Renault_Alpine_Logo.JPG"
+      }
+    ],
+    "approvedYears": []
+  },
+  {
+    "id": "f1db:arrows",
+    "team": "Arrows",
+    "seasonYears": [
+      2000,
+      2001,
+      2002
+    ],
+    "article": "https://en.wikipedia.org/wiki/Arrows_Grand_Prix_International",
+    "candidateFiles": [
+      {
+        "file": "Arrows Grand Prix logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Arrows_Grand_Prix_logo.png"
+      },
+      {
+        "file": "The Arrows logo on the nose of the 1981 Arrows A3 (14665317275).jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:The_Arrows_logo_on_the_nose_of_the_1981_Arrows_A3_%2814665317275%29.jpg"
+      },
+      {
+        "file": "Arrows logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Arrows_logo.png"
+      },
+      {
+        "file": "Logo arrows bk.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:Logo_arrows_bk.svg"
+      }
+    ],
+    "approvedYears": []
+  },
+  {
+    "id": "f1db:aston-martin",
+    "team": "Aston Martin",
+    "seasonYears": [
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "article": "https://en.wikipedia.org/wiki/Aston_Martin_in_Formula_One",
+    "candidateFiles": [
+      {
+        "file": "BWT Racing Point Logo.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:BWT_Racing_Point_Logo.svg"
+      },
+      {
+        "file": "Aston Martin F1 Team logo 2024.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Aston_Martin_F1_Team_logo_2024.jpg"
+      }
+    ],
+    "approvedYears": []
+  },
+  {
+    "id": "f1db:audi",
+    "team": "Audi",
+    "seasonYears": [
+      2026
+    ],
+    "article": "https://en.wikipedia.org/wiki/Audi_in_Formula_One",
+    "candidateFiles": [
+      {
+        "file": "Audif1.com logo17 (cropped).svg",
+        "source": "https://commons.wikimedia.org/wiki/File:Audif1.com_logo17_%28cropped%29.svg"
+      },
+      {
+        "file": "Audi-Logo 2016.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:Audi-Logo_2016.svg"
+      }
+    ],
+    "approvedYears": []
+  },
+  {
+    "id": "f1db:bar",
+    "team": "BAR",
+    "seasonYears": [
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005
+    ],
+    "article": "https://en.wikipedia.org/wiki/British_American_Racing",
+    "candidateFiles": [],
+    "approvedYears": []
+  },
+  {
+    "id": "f1db:benetton",
+    "team": "Benetton",
+    "seasonYears": [
+      2000,
+      2001
+    ],
+    "article": "https://en.wikipedia.org/wiki/Benetton_Formula",
+    "candidateFiles": [
+      {
+        "file": "United Colors of Benetton - logo (Italy, 1996-2011).svg",
+        "source": "https://commons.wikimedia.org/wiki/File:United_Colors_of_Benetton_-_logo_%28Italy%2C_1996-2011%29.svg"
+      }
+    ],
+    "approvedYears": []
+  },
+  {
+    "id": "f1db:bmw-sauber",
+    "team": "BMW Sauber",
+    "seasonYears": [
+      2006,
+      2007,
+      2008,
+      2009
+    ],
+    "article": "https://en.wikipedia.org/wiki/BMW_Sauber",
+    "candidateFiles": [
+      {
+        "file": "BMW Sauber Logo.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:BMW_Sauber_Logo.svg"
+      },
+      {
+        "file": "Bmw sauber logo.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Bmw_sauber_logo.jpg"
+      },
+      {
+        "file": "BMW Sauber F1 Team logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:BMW_Sauber_F1_Team_logo.png"
+      }
+    ],
+    "approvedYears": []
+  },
+  {
+    "id": "f1db:brawn",
+    "team": "Brawn",
+    "seasonYears": [
+      2009
+    ],
+    "article": "https://en.wikipedia.org/wiki/Brawn_GP",
+    "candidateFiles": [
+      {
+        "file": "Brawn GP logo.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:Brawn_GP_logo.svg"
+      }
+    ],
+    "approvedYears": []
+  },
+  {
+    "id": "f1db:cadillac",
+    "team": "Cadillac",
+    "seasonYears": [
+      2026
+    ],
+    "article": "https://en.wikipedia.org/wiki/Cadillac_Formula_1_Team",
+    "candidateFiles": [
+      {
+        "file": "Cadillac Formula 1 Team logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Cadillac_Formula_1_Team_logo.png"
+      }
+    ],
+    "approvedYears": []
+  },
+  {
+    "id": "f1db:caterham",
+    "team": "Caterham",
+    "seasonYears": [
+      2012,
+      2013,
+      2014
+    ],
+    "article": "https://en.wikipedia.org/wiki/Caterham_F1_Team",
+    "candidateFiles": [
+      {
+        "file": "Caterham F1 Team logo.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Caterham_F1_Team_logo.jpg"
+      },
+      {
+        "file": "Caterham F1 Team 2014 logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Caterham_F1_Team_2014_logo.png"
+      },
+      {
+        "file": "Caterham F1 Team logo (2014).svg",
+        "source": "https://commons.wikimedia.org/wiki/File:Caterham_F1_Team_logo_%282014%29.svg"
+      },
+      {
+        "file": "Caterham Logo.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:Caterham_Logo.svg"
+      },
+      {
+        "file": "Caterham Logo Greem.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:Caterham_Logo_Greem.svg"
+      },
+      {
+        "file": "Caterham F1 Team Logo 2012.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Caterham_F1_Team_Logo_2012.jpg"
+      },
+      {
+        "file": "Lotus F1 Racing Logo.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Lotus_F1_Racing_Logo.jpg"
+      }
+    ],
+    "approvedYears": []
+  },
+  {
+    "id": "f1db:ferrari",
+    "team": "Ferrari",
+    "seasonYears": [
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "article": "https://en.wikipedia.org/wiki/Scuderia_Ferrari",
+    "candidateFiles": [
+      {
+        "file": "New logo of Scuderia Ferrari, Marlboro subliminal advertising (cropped).jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:New_logo_of_Scuderia_Ferrari%2C_Marlboro_subliminal_advertising_%28cropped%29.jpg"
+      },
+      {
+        "file": "Mercedes-Benz Actros wearing the Scuderia Ferrari logo.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_Actros_wearing_the_Scuderia_Ferrari_logo.jpg"
+      },
+      {
+        "file": "Mercedes-Benz Actros portant le logo de la Scuderia Ferrari (5716286858).jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_Actros_portant_le_logo_de_la_Scuderia_Ferrari_%285716286858%29.jpg"
+      },
+      {
+        "file": "Ferrari logo on the side of the 1952 Ferrari 500 at the Donington Grand Prix collection (14478670940).jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Ferrari_logo_on_the_side_of_the_1952_Ferrari_500_at_the_Donington_Grand_Prix_collection_%2814478670940%29.jpg"
+      },
+      {
+        "file": "Ferrari S Logo On Black (186552515).jpeg",
+        "source": "https://commons.wikimedia.org/wiki/File:Ferrari_S_Logo_On_Black_%28186552515%29.jpeg"
+      },
+      {
+        "file": "Ferrari logo - Mexican Grand Prix 25.JPG",
+        "source": "https://commons.wikimedia.org/wiki/File:Ferrari_logo_-_Mexican_Grand_Prix_25.JPG"
+      },
+      {
+        "file": "LS3 4411-2 Ferrari SF 70 H - 24 feb. 2017 - Kimi Raikkonen n. 7 10x15 con logo R.JPG",
+        "source": "https://commons.wikimedia.org/wiki/File:LS3_4411-2_Ferrari_SF_70_H_-_24_feb._2017_-_Kimi_Raikkonen_n._7_10x15_con_logo_R.JPG"
+      }
+    ],
+    "approvedYears": []
+  },
+  {
+    "id": "f1db:force-india",
+    "team": "Force India",
+    "seasonYears": [
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018
+    ],
+    "article": "https://en.wikipedia.org/wiki/Force_India",
+    "candidateFiles": [
+      {
+        "file": "Force India.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:Force_India.svg"
+      },
+      {
+        "file": "Rapid Action Force logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Rapid_Action_Force_logo.png"
+      },
+      {
+        "file": "BSF Logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:BSF_Logo.png"
+      },
+      {
+        "file": "SFF LOGO.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:SFF_LOGO.svg"
+      }
+    ],
+    "approvedYears": []
+  },
+  {
+    "id": "f1db:haas",
+    "team": "Haas",
+    "seasonYears": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "article": "https://en.wikipedia.org/wiki/Haas_F1_Team",
+    "candidateFiles": [
+      {
+        "file": "Haas F1 Team Logo.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:Haas_F1_Team_Logo.svg"
+      },
+      {
+        "file": "Rich Energy Haas F1 Team Logo.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:Rich_Energy_Haas_F1_Team_Logo.svg"
+      },
+      {
+        "file": "Uralkali Haas F1 Team Logo.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:Uralkali_Haas_F1_Team_Logo.svg"
+      },
+      {
+        "file": "MoneyGram Haas F1 Team Logo.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:MoneyGram_Haas_F1_Team_Logo.svg"
+      },
+      {
+        "file": "TGR Haas F1 Team Logo (2026).svg",
+        "source": "https://commons.wikimedia.org/wiki/File:TGR_Haas_F1_Team_Logo_%282026%29.svg"
+      },
+      {
+        "file": "Haas F1 Team logo 2019.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:Haas_F1_Team_logo_2019.svg"
+      },
+      {
+        "file": "Logo Haas F1.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Logo_Haas_F1.png"
+      }
+    ],
+    "approvedYears": []
+  },
+  {
+    "id": "f1db:honda",
+    "team": "Honda",
+    "seasonYears": [
+      2006,
+      2007,
+      2008
+    ],
+    "article": "https://en.wikipedia.org/wiki/Honda_in_Formula_One",
+    "candidateFiles": [
+      {
+        "file": "Logo Honda F1.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:Logo_Honda_F1.svg"
+      },
+      {
+        "file": "Logo Honda F1 Racing.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:Logo_Honda_F1_Racing.svg"
+      },
+      {
+        "file": "McLaren Honda Logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:McLaren_Honda_Logo.png"
+      },
+      {
+        "file": "Honda Formula One logo 1960s.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Honda_Formula_One_logo_1960s.jpg"
+      },
+      {
+        "file": "Logo Honda F1.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Logo_Honda_F1.png"
+      },
+      {
+        "file": "Honda Racing F1 Team logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Honda_Racing_F1_Team_logo.png"
+      }
+    ],
+    "approvedYears": []
+  },
+  {
+    "id": "f1db:hrt",
+    "team": "HRT",
+    "seasonYears": [
+      2010,
+      2011,
+      2012
+    ],
+    "article": "https://en.wikipedia.org/wiki/HRT_Formula_1_Team",
+    "candidateFiles": [
+      {
+        "file": "HRT new logo.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:HRT_new_logo.jpg"
+      }
+    ],
+    "approvedYears": []
+  },
+  {
+    "id": "f1db:jaguar",
+    "team": "Jaguar",
+    "seasonYears": [
+      2000,
+      2001,
+      2002,
+      2003,
+      2004
+    ],
+    "article": "https://en.wikipedia.org/wiki/Jaguar_Racing",
+    "candidateFiles": [],
+    "approvedYears": []
+  },
+  {
+    "id": "f1db:jordan",
+    "team": "Jordan",
+    "seasonYears": [
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005
+    ],
+    "article": "https://en.wikipedia.org/wiki/Jordan_Grand_Prix",
+    "candidateFiles": [],
+    "approvedYears": []
+  },
+  {
+    "id": "f1db:kick-sauber",
+    "team": "Kick Sauber",
+    "seasonYears": [
+      2024,
+      2025
+    ],
+    "article": "https://en.wikipedia.org/wiki/Sauber_Motorsport",
+    "candidateFiles": [
+      {
+        "file": "Logo Sauber F1.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Logo_Sauber_F1.png"
+      },
+      {
+        "file": "2023 Stake F1 Team Kick Sauber logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:2023_Stake_F1_Team_Kick_Sauber_logo.png"
+      },
+      {
+        "file": "Logo of Stake F1 Team Kick Sauber.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Logo_of_Stake_F1_Team_Kick_Sauber.png"
+      },
+      {
+        "file": "BMW Sauber F1 Team logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:BMW_Sauber_F1_Team_logo.png"
+      },
+      {
+        "file": "Sauber-logo.webp",
+        "source": "https://commons.wikimedia.org/wiki/File:Sauber-logo.webp"
+      },
+      {
+        "file": "Bmw sauber logo.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Bmw_sauber_logo.jpg"
+      },
+      {
+        "file": "BMW Sauber Logo.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:BMW_Sauber_Logo.svg"
+      },
+      {
+        "file": "Sauber F1 Team logo.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:Sauber_F1_Team_logo.svg"
+      },
+      {
+        "file": "Logo sauber 2023.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Logo_sauber_2023.jpg"
+      }
+    ],
+    "approvedYears": []
+  },
+  {
+    "id": "f1db:lotus-f1",
+    "team": "Lotus",
+    "seasonYears": [
+      2012,
+      2013,
+      2014,
+      2015
+    ],
+    "article": "https://en.wikipedia.org/wiki/Lotus_F1_Team",
+    "candidateFiles": [
+      {
+        "file": "Lotus F1 Team logo.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Lotus_F1_Team_logo.jpg"
+      },
+      {
+        "file": "Lotus F1 Racing Logo.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Lotus_F1_Racing_Logo.jpg"
+      },
+      {
+        "file": "Team Lotus logos.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Team_Lotus_logos.jpg"
+      },
+      {
+        "file": "Logo Team Lotus T128.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Logo_Team_Lotus_T128.jpg"
+      },
+      {
+        "file": "Lotus Logo.JPG",
+        "source": "https://commons.wikimedia.org/wiki/File:Lotus_Logo.JPG"
+      },
+      {
+        "file": "Logo 500 GP Team Lotus.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Logo_500_GP_Team_Lotus.png"
+      },
+      {
+        "file": "Lotus T128 nose logo 2011 Malaysia.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Lotus_T128_nose_logo_2011_Malaysia.jpg"
+      },
+      {
+        "file": "Lotus logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Lotus_logo.png"
+      },
+      {
+        "file": "Lotus orange Logo A.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Lotus_orange_Logo_A.jpg"
+      },
+      {
+        "file": "Lotus Logo in St. Gallen (2026).jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Lotus_Logo_in_St._Gallen_%282026%29.jpg"
+      }
+    ],
+    "approvedYears": []
+  },
+  {
+    "id": "f1db:lotus-racing",
+    "team": "Lotus Racing",
+    "seasonYears": [
+      2010,
+      2011
+    ],
+    "article": "https://en.wikipedia.org/wiki/Team_Lotus_%282010%E2%80%932011%29",
+    "candidateFiles": [
+      {
+        "file": "Team Lotus logos.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Team_Lotus_logos.jpg"
+      },
+      {
+        "file": "Logo Team Lotus T128.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Logo_Team_Lotus_T128.jpg"
+      },
+      {
+        "file": "Logo 500 GP Team Lotus.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Logo_500_GP_Team_Lotus.png"
+      },
+      {
+        "file": "Lotus T128 nose logo 2011 Malaysia.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Lotus_T128_nose_logo_2011_Malaysia.jpg"
+      },
+      {
+        "file": "Lotus F1 Racing Logo.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Lotus_F1_Racing_Logo.jpg"
+      },
+      {
+        "file": "Lotus Logo.JPG",
+        "source": "https://commons.wikimedia.org/wiki/File:Lotus_Logo.JPG"
+      },
+      {
+        "file": "Caterham F1 Team logo.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Caterham_F1_Team_logo.jpg"
+      },
+      {
+        "file": "Caterham F1 Team 2014 logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Caterham_F1_Team_2014_logo.png"
+      },
+      {
+        "file": "Caterham F1 Team logo (2014).svg",
+        "source": "https://commons.wikimedia.org/wiki/File:Caterham_F1_Team_logo_%282014%29.svg"
+      },
+      {
+        "file": "Caterham Logo.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:Caterham_Logo.svg"
+      }
+    ],
+    "approvedYears": []
+  },
+  {
+    "id": "f1db:manor",
+    "team": "Manor",
+    "seasonYears": [
+      2016
+    ],
+    "article": "https://en.wikipedia.org/wiki/Manor_Racing",
+    "candidateFiles": [
+      {
+        "file": "Logo Manor F1.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Logo_Manor_F1.png"
+      },
+      {
+        "file": "Manor F1 Team logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Manor_F1_Team_logo.png"
+      }
+    ],
+    "approvedYears": []
+  },
+  {
+    "id": "f1db:marussia",
+    "team": "Marussia",
+    "seasonYears": [
+      2012,
+      2013,
+      2014,
+      2015
+    ],
+    "article": "https://en.wikipedia.org/wiki/Marussia_F1_Team",
+    "candidateFiles": [
+      {
+        "file": "Manor F1 Team logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Manor_F1_Team_logo.png"
+      },
+      {
+        "file": "Marussia logo on one of their F1 cars (7448443504).jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Marussia_logo_on_one_of_their_F1_cars_%287448443504%29.jpg"
+      }
+    ],
+    "approvedYears": []
+  },
+  {
+    "id": "f1db:mclaren",
+    "team": "McLaren",
+    "seasonYears": [
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "article": "https://en.wikipedia.org/wiki/McLaren",
+    "candidateFiles": [
+      {
+        "file": "McLaren Racing logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:McLaren_Racing_logo.png"
+      },
+      {
+        "file": "McLaren 2018 logo.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:McLaren_2018_logo.svg"
+      },
+      {
+        "file": "McLaren logo (2026).svg",
+        "source": "https://commons.wikimedia.org/wiki/File:McLaren_logo_%282026%29.svg"
+      },
+      {
+        "file": "McLaren logo on the nose of the McLaren MP4 15A (14478887860).jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:McLaren_logo_on_the_nose_of_the_McLaren_MP4_15A_%2814478887860%29.jpg"
+      },
+      {
+        "file": "McLaren Automotive logo.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:McLaren_Automotive_logo.svg"
+      },
+      {
+        "file": "Vodafone McLaren Mercedes Logo.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:Vodafone_McLaren_Mercedes_Logo.svg"
+      },
+      {
+        "file": "Vodafone McLaren Mercedes logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Vodafone_McLaren_Mercedes_logo.png"
+      },
+      {
+        "file": "McLaren logo on the engine cover of the 1993 McLaren-Ford (14479130927).jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:McLaren_logo_on_the_engine_cover_of_the_1993_McLaren-Ford_%2814479130927%29.jpg"
+      },
+      {
+        "file": "McLaren Mercedes logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:McLaren_Mercedes_logo.png"
+      },
+      {
+        "file": "1996 McLaren F1 logo.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:1996_McLaren_F1_logo.jpg"
+      },
+      {
+        "file": "Mclaren Logo 2021.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:Mclaren_Logo_2021.svg"
+      },
+      {
+        "file": "Vodafone mclaren f1 logo.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Vodafone_mclaren_f1_logo.jpg"
+      },
+      {
+        "file": "Mclaren logo.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Mclaren_logo.jpg"
+      }
+    ],
+    "approvedYears": []
+  },
+  {
+    "id": "f1db:mercedes",
+    "team": "Mercedes",
+    "seasonYears": [
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "article": "https://en.wikipedia.org/wiki/Mercedes-Benz_in_Formula_One",
+    "candidateFiles": [
+      {
+        "file": "Mercedes-Benz Logo 2010.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_Logo_2010.svg"
+      },
+      {
+        "file": "Mercedes-Benz in Formula One logo.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_in_Formula_One_logo.svg"
+      },
+      {
+        "file": "Mercedes-Benz AMG Petronas Formula One Team Logo Wheelsology.JPG",
+        "source": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_AMG_Petronas_Formula_One_Team_Logo_Wheelsology.JPG"
+      },
+      {
+        "file": "Mercedes-Benz logo 2.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_logo_2.svg"
+      },
+      {
+        "file": "Mercedes-Benz free logo.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_free_logo.svg"
+      },
+      {
+        "file": "Mercedes-Benz logo.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_logo.svg"
+      },
+      {
+        "file": "Logo Mercedes GP Petronas 2011.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:Logo_Mercedes_GP_Petronas_2011.svg"
+      },
+      {
+        "file": "Mercedes-AMG Petronas Formula One Team Logo (2026).webp",
+        "source": "https://commons.wikimedia.org/wiki/File:Mercedes-AMG_Petronas_Formula_One_Team_Logo_%282026%29.webp"
+      },
+      {
+        "file": "Mercedes AMG Petronas F1 Logo.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:Mercedes_AMG_Petronas_F1_Logo.svg"
+      },
+      {
+        "file": "Mercedes-AMG Petronas F1 Team logo (2026).svg",
+        "source": "https://commons.wikimedia.org/wiki/File:Mercedes-AMG_Petronas_F1_Team_logo_%282026%29.svg"
+      },
+      {
+        "file": "Mercedes gp petronas logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Mercedes_gp_petronas_logo.png"
+      },
+      {
+        "file": "Mercedes AMG Petronas logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Mercedes_AMG_Petronas_logo.png"
+      },
+      {
+        "file": "Vodafone mclaren f1 logo.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Vodafone_mclaren_f1_logo.jpg"
+      },
+      {
+        "file": "2023 Stake F1 Team Kick Sauber logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:2023_Stake_F1_Team_Kick_Sauber_logo.png"
+      }
+    ],
+    "approvedYears": []
+  },
+  {
+    "id": "f1db:midland",
+    "team": "Midland",
+    "seasonYears": [
+      2006
+    ],
+    "article": "https://en.wikipedia.org/wiki/Midland_F1_Racing",
+    "candidateFiles": [
+      {
+        "file": "Spyker MF1 Racing-Logo.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Spyker_MF1_Racing-Logo.jpg"
+      }
+    ],
+    "approvedYears": []
+  },
+  {
+    "id": "f1db:minardi",
+    "team": "Minardi",
+    "seasonYears": [
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005
+    ],
+    "article": "https://en.wikipedia.org/wiki/Minardi",
+    "candidateFiles": [
+      {
+        "file": "Logo Minardi.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Logo_Minardi.jpg"
+      }
+    ],
+    "approvedYears": []
+  },
+  {
+    "id": "f1db:prost",
+    "team": "Prost",
+    "seasonYears": [
+      2000,
+      2001
+    ],
+    "article": "https://en.wikipedia.org/wiki/Prost_Grand_Prix",
+    "candidateFiles": [
+      {
+        "file": "Prost Grand Prix Formula One Logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Prost_Grand_Prix_Formula_One_Logo.png"
+      }
+    ],
+    "approvedYears": []
+  },
+  {
+    "id": "f1db:racing-bulls",
+    "team": "Racing Bulls",
+    "seasonYears": [
+      2025,
+      2026
+    ],
+    "article": "https://en.wikipedia.org/wiki/Racing_Bulls",
+    "candidateFiles": [
+      {
+        "file": "Red Bull Racing - 2005 Logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Red_Bull_Racing_-_2005_Logo.png"
+      },
+      {
+        "file": "Red Bull Racing logo ita.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Red_Bull_Racing_logo_ita.png"
+      },
+      {
+        "file": "Original RB Studios logo, March 1991.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Original_RB_Studios_logo%2C_March_1991.png"
+      },
+      {
+        "file": "RB Logo 2018 07.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:RB_Logo_2018_07.svg"
+      },
+      {
+        "file": "Drittes Fernsehprogramm NDR-RB-SFB Logo (1965 bis 1988).svg",
+        "source": "https://commons.wikimedia.org/wiki/File:Drittes_Fernsehprogramm_NDR-RB-SFB_Logo_%281965_bis_1988%29.svg"
+      },
+      {
+        "file": "RB-Logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:RB-Logo.png"
+      },
+      {
+        "file": "RB Logo.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:RB_Logo.svg"
+      },
+      {
+        "file": "RB Main Logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:RB_Main_Logo.png"
+      }
+    ],
+    "approvedYears": []
+  },
+  {
+    "id": "f1db:racing-point",
+    "team": "Racing Point",
+    "seasonYears": [
+      2019,
+      2020
+    ],
+    "article": "https://en.wikipedia.org/wiki/Racing_Point_F1_Team",
+    "candidateFiles": [
+      {
+        "file": "BWT Racing Point Logo.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:BWT_Racing_Point_Logo.svg"
+      }
+    ],
+    "approvedYears": []
+  },
+  {
+    "id": "f1db:rb",
+    "team": "RB",
+    "seasonYears": [
+      2024
+    ],
+    "article": "https://en.wikipedia.org/wiki/RB_Formula_One_Team",
+    "candidateFiles": [
+      {
+        "file": "Original RB Studios logo, March 1991.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Original_RB_Studios_logo%2C_March_1991.png"
+      },
+      {
+        "file": "RB Logo 2018 07.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:RB_Logo_2018_07.svg"
+      },
+      {
+        "file": "Drittes Fernsehprogramm NDR-RB-SFB Logo (1965 bis 1988).svg",
+        "source": "https://commons.wikimedia.org/wiki/File:Drittes_Fernsehprogramm_NDR-RB-SFB_Logo_%281965_bis_1988%29.svg"
+      },
+      {
+        "file": "RB-Logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:RB-Logo.png"
+      },
+      {
+        "file": "RB Logo.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:RB_Logo.svg"
+      },
+      {
+        "file": "RB Main Logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:RB_Main_Logo.png"
+      }
+    ],
+    "approvedYears": []
+  },
+  {
+    "id": "f1db:red-bull",
+    "team": "Red Bull",
+    "seasonYears": [
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "article": "https://en.wikipedia.org/wiki/Red_Bull_Racing",
+    "candidateFiles": [
+      {
+        "file": "Red Bull Racing logo ita.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Red_Bull_Racing_logo_ita.png"
+      },
+      {
+        "file": "Red Bull Racing - 2005 Logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Red_Bull_Racing_-_2005_Logo.png"
+      },
+      {
+        "file": "Logo of Red bull.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:Logo_of_Red_bull.svg"
+      },
+      {
+        "file": "2023 Stake F1 Team Kick Sauber logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:2023_Stake_F1_Team_Kick_Sauber_logo.png"
+      },
+      {
+        "file": "Logo of Stake F1 Team Kick Sauber.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Logo_of_Stake_F1_Team_Kick_Sauber.png"
+      }
+    ],
+    "approvedYears": []
+  },
+  {
+    "id": "f1db:renault",
+    "team": "Renault",
+    "seasonYears": [
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020
+    ],
+    "article": "https://en.wikipedia.org/wiki/Renault_in_Formula_One",
+    "candidateFiles": [
+      {
+        "file": "Renault Sport Formula One Team logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Renault_Sport_Formula_One_Team_logo.png"
+      },
+      {
+        "file": "Logo Renault Sport F1 Team.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Logo_Renault_Sport_F1_Team.png"
+      },
+      {
+        "file": "Renault R31 nose logo 2011 Malaysia.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Renault_R31_nose_logo_2011_Malaysia.jpg"
+      },
+      {
+        "file": "Lotus T128 nose logo 2011 Malaysia.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Lotus_T128_nose_logo_2011_Malaysia.jpg"
+      },
+      {
+        "file": "Renault F1 Team logo 2019.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Renault_F1_Team_logo_2019.png"
+      },
+      {
+        "file": "Renault Sport F1 logo as of 2016.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Renault_Sport_F1_logo_as_of_2016.png"
+      },
+      {
+        "file": "Logo Renault Sport F1.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Logo_Renault_Sport_F1.png"
+      },
+      {
+        "file": "Logo Renault F1.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Logo_Renault_F1.png"
+      },
+      {
+        "file": "Renault Sport F1 Team Logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Renault_Sport_F1_Team_Logo.png"
+      },
+      {
+        "file": "Renault Sport F1 Team logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Renault_Sport_F1_Team_logo.png"
+      }
+    ],
+    "approvedYears": []
+  },
+  {
+    "id": "f1db:sauber",
+    "team": "Sauber",
+    "seasonYears": [
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018
+    ],
+    "article": "https://en.wikipedia.org/wiki/Sauber_Motorsport",
+    "candidateFiles": [
+      {
+        "file": "Logo Sauber F1.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Logo_Sauber_F1.png"
+      },
+      {
+        "file": "2023 Stake F1 Team Kick Sauber logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:2023_Stake_F1_Team_Kick_Sauber_logo.png"
+      },
+      {
+        "file": "Logo of Stake F1 Team Kick Sauber.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Logo_of_Stake_F1_Team_Kick_Sauber.png"
+      },
+      {
+        "file": "BMW Sauber F1 Team logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:BMW_Sauber_F1_Team_logo.png"
+      },
+      {
+        "file": "Sauber-logo.webp",
+        "source": "https://commons.wikimedia.org/wiki/File:Sauber-logo.webp"
+      },
+      {
+        "file": "Bmw sauber logo.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Bmw_sauber_logo.jpg"
+      },
+      {
+        "file": "BMW Sauber Logo.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:BMW_Sauber_Logo.svg"
+      },
+      {
+        "file": "Sauber F1 Team logo.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:Sauber_F1_Team_logo.svg"
+      },
+      {
+        "file": "Logo sauber 2023.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Logo_sauber_2023.jpg"
+      },
+      {
+        "file": "Mercedes three-pointed star logo on the Sauber Mercedes C9 sports prototype car (14478968437).jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Mercedes_three-pointed_star_logo_on_the_Sauber_Mercedes_C9_sports_prototype_car_%2814478968437%29.jpg"
+      },
+      {
+        "file": "Stake F1 Team logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Stake_F1_Team_logo.png"
+      },
+      {
+        "file": "Stake F1 logo.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Stake_F1_logo.jpg"
+      },
+      {
+        "file": "Alfa Romeo F1 Team Stake Logo.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:Alfa_Romeo_F1_Team_Stake_Logo.svg"
+      },
+      {
+        "file": "Logo-stakef1team-rgb-pos-1.webp",
+        "source": "https://commons.wikimedia.org/wiki/File:Logo-stakef1team-rgb-pos-1.webp"
+      }
+    ],
+    "approvedYears": []
+  },
+  {
+    "id": "f1db:spyker",
+    "team": "Spyker",
+    "seasonYears": [
+      2007
+    ],
+    "article": "https://en.wikipedia.org/wiki/Spyker_F1",
+    "candidateFiles": [
+      {
+        "file": "Spyker MF1 Racing-Logo.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Spyker_MF1_Racing-Logo.jpg"
+      }
+    ],
+    "approvedYears": []
+  },
+  {
+    "id": "f1db:super-aguri",
+    "team": "Super Aguri",
+    "seasonYears": [
+      2006,
+      2007,
+      2008
+    ],
+    "article": "https://en.wikipedia.org/wiki/Super_Aguri_F1",
+    "candidateFiles": [
+      {
+        "file": "Super Aguri logo.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:Super_Aguri_logo.svg"
+      }
+    ],
+    "approvedYears": []
+  },
+  {
+    "id": "f1db:toro-rosso",
+    "team": "Toro Rosso",
+    "seasonYears": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019
+    ],
+    "article": "https://en.wikipedia.org/wiki/Scuderia_Toro_Rosso",
+    "candidateFiles": [
+      {
+        "file": "Govorov str logo.JPG",
+        "source": "https://commons.wikimedia.org/wiki/File:Govorov_str_logo.JPG"
+      }
+    ],
+    "approvedYears": []
+  },
+  {
+    "id": "f1db:toyota",
+    "team": "Toyota",
+    "seasonYears": [
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009
+    ],
+    "article": "https://en.wikipedia.org/wiki/Toyota_Racing_%28Formula_One%29",
+    "candidateFiles": [
+      {
+        "file": "Panasonic Toyota Racing logo.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:Panasonic_Toyota_Racing_logo.svg"
+      },
+      {
+        "file": "Logo toyota.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Logo_toyota.jpg"
+      },
+      {
+        "file": "TGR Haas F1 Team Logo (2026).svg",
+        "source": "https://commons.wikimedia.org/wiki/File:TGR_Haas_F1_Team_Logo_%282026%29.svg"
+      }
+    ],
+    "approvedYears": []
+  },
+  {
+    "id": "f1db:virgin",
+    "team": "Virgin",
+    "seasonYears": [
+      2010,
+      2011
+    ],
+    "article": "https://en.wikipedia.org/wiki/Virgin_Racing",
+    "candidateFiles": [],
+    "approvedYears": []
+  },
+  {
+    "id": "f1db:williams",
+    "team": "Williams",
+    "seasonYears": [
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "article": "https://en.wikipedia.org/wiki/Williams_Grand_Prix_Engineering",
+    "candidateFiles": [
+      {
+        "file": "Williams Racing Logo 2024.webp",
+        "source": "https://commons.wikimedia.org/wiki/File:Williams_Racing_Logo_2024.webp"
+      },
+      {
+        "file": "Williams Racing Logo 2020.webp",
+        "source": "https://commons.wikimedia.org/wiki/File:Williams_Racing_Logo_2020.webp"
+      },
+      {
+        "file": "Williams Racing 2020 logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Williams_Racing_2020_logo.png"
+      },
+      {
+        "file": "Logo Williams F1.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Logo_Williams_F1.png"
+      },
+      {
+        "file": "Mike Williams Logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Mike_Williams_Logo.png"
+      },
+      {
+        "file": "Williams Racing 2022 logo.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:Williams_Racing_2022_logo.svg"
+      },
+      {
+        "file": "Williams FW05 Logo.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Williams_FW05_Logo.jpg"
+      },
+      {
+        "file": "Williams F1 logo 2026.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Williams_F1_logo_2026.png"
+      },
+      {
+        "file": "Williams F1 Team 2014 logo.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Williams_F1_Team_2014_logo.jpg"
+      },
+      {
+        "file": "Williams F1 logo 2026 (Corrigindo).png",
+        "source": "https://commons.wikimedia.org/wiki/File:Williams_F1_logo_2026_%28Corrigindo%29.png"
+      },
+      {
+        "file": "20150130002217!Williams Martini Racing logo.png",
+        "source": "https://commons.wikimedia.org/wiki/File:20150130002217%21Williams_Martini_Racing_logo.png"
+      },
+      {
+        "file": "Atlassian Williams F1 Team logo.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:Atlassian_Williams_F1_Team_logo.svg"
+      },
+      {
+        "file": "Atlassian Williams F1 Team horizontal logo.svg",
+        "source": "https://commons.wikimedia.org/wiki/File:Atlassian_Williams_F1_Team_horizontal_logo.svg"
+      }
+    ],
+    "approvedYears": []
+  }
+]

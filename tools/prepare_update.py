@@ -105,6 +105,7 @@ def main():
     p.add_argument('--cache-dir',default='private/f1db/releases');p.add_argument('--timeout',type=int,default=30)
     p.add_argument('--release-json');p.add_argument('--local-archive');p.add_argument('--user')
     p.add_argument('--as-of',type=date.fromisoformat,help='Offline replay date')
+    p.add_argument('--media-output',help='Optional local incremental DRAFT media sync after successful candidate audit')
     a=p.parse_args()
     if not 1<=a.timeout<=300:p.error('--timeout must be 1..300')
     if a.as_of and not a.release_json:p.error('--as-of requires offline metadata')
@@ -112,6 +113,15 @@ def main():
         r=prepare(a.baseline,a.output,a.cache_dir,timeout=a.timeout,release_json=a.release_json,local_archive=a.local_archive,user=a.user,as_of=a.as_of)
         print('DRAFT READY; new seasons:',r['changes']['newSeasons'],'; newly completed:',len(r['changes']['newlyCompleted']))
         print('AUDIT:',r['audit']['issues'],'issues;',r['audit']['countbackCandidates'],'countback candidates')
+        if a.media_output:
+            from sync_media import sync
+            try:
+                media_report=sync(Path(a.output)/'candidate.json',a.media_output,cache=a.cache_dir)
+                print('MEDIA',media_report['status'],media_report['present'])
+                if media_report['errors']:
+                    print('DRAFT DATA READY; media incomplete, retry separately; no activation');return 2
+            except Exception as exc:
+                print('DRAFT DATA READY; MEDIA SYNC BLOCKED:',exc);return 2
         print('NO ACTIVATION OR PUBLICATION AUTHORIZED');return 0
     except KeyboardInterrupt:
         print('UPDATE CANCELLED; no activation');return 130

@@ -1,0 +1,95 @@
+[
+  {
+    "id": "f1db:ferrari",
+    "file": "Scuderia Ferrari (4124759041) (cropped).jpg",
+    "years": [
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Scuderia_Ferrari_%284124759041%29_%28cropped%29.jpg",
+    "review": "Local DRAFT only; Photograph dated 2009 by Håkan Dahlström (CC BY 2.0), visually inspected: yellow racing shield with SF letters; representative team emblem only; exact sponsor and year variants unverified; visual, season and rights review required before publication",
+    "evidence": [
+      "https://www.museodelmarchioitaliano.it/en/ferrari-2/",
+      "https://commons.wikimedia.org/wiki/Category:Scuderia_Ferrari_logos"
+    ],
+    "periodStatus": "provisional_representative"
+  },
+  {
+    "id": "f1db:mercedes",
+    "file": "Mercedes AMG Petronas F1 Logo.svg",
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Mercedes_AMG_Petronas_F1_Logo.svg",
+    "review": "Local DRAFT only; Current Commons revision dated September 2020, official team source; representative team identity for 2019–25, not exact annual variant; visual, season and rights review required before publication",
+    "evidence": [],
+    "periodStatus": "provisional_representative"
+  },
+  {
+    "id": "f1db:force-india",
+    "file": "Force India.svg",
+    "years": [
+      2008,
+      2009,
+      2010,
+      2011,
+      2018
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Force_India.svg",
+    "review": "Local DRAFT only; Previously successfully downloaded team mark; representative identity only, exact sponsor variants and 2018 entrant distinction not represented; visual, season and rights review required before publication",
+    "evidence": [],
+    "periodStatus": "provisional_representative"
+  },
+  {
+    "id": "f1db:kick-sauber",
+    "file": "Logo of Stake F1 Team Kick Sauber.png",
+    "years": [
+      2025
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Logo_of_Stake_F1_Team_Kick_Sauber.png",
+    "review": "Local DRAFT only; Previously successfully downloaded 2024 team mark; representative identity for 2025, exact variant unverified; visual, season and rights review required before publication",
+    "evidence": [],
+    "periodStatus": "provisional_representative"
+  },
+  {
+    "id": "f1db:aston-martin",
+    "file": "Aston Martin F1 Team logo 2024.jpg",
+    "years": [
+      2025,
+      2026
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Aston_Martin_F1_Team_logo_2024.jpg",
+    "review": "Local DRAFT only; Previously successfully downloaded 2024 team mark; representative identity for 2025–26, exact sponsor variants unverified; Commons author unknown, rights review required; visual, season and rights review required before publication",
+    "evidence": [],
+    "periodStatus": "provisional_representative"
+  }
+]

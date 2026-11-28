@@ -1,0 +1,14 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {sessionPodium,positionGain,defaultEventKind} from '../web/preview/model.mjs';
+const r=(p,extra={})=>({driverId:'d'+p,position:p,classified:true,started:true,status:'finished',gridPosition:5,...extra});
+const s=(results,status='final',kind='race')=>({kind,status,results});
+test('podium uses exact positions, not source row order',()=>assert.deepEqual(sessionPodium(s([r(3),r(4),r(1),r(2)])).map(x=>x.position),[1,2,3]));
+test('missing podium places are never filled by fourth',()=>assert.deepEqual(sessionPodium(s([r(1),r(3),r(4)])).map(x=>x?.position??null),[1,null,3]));
+test('no podium for provisional, scheduled, partial or qualifying',()=>{for(const status of ['provisional','scheduled','partial','pending_results'])assert.deepEqual(sessionPodium(s([r(1)],status)),[]);assert.deepEqual(sessionPodium(s([r(1)],'final','qualifying')),[]);});
+test('sprint classification can have its own podium',()=>assert.equal(sessionPodium(s([r(1)],'final','sprint'))[0].position,1));
+test('exclude DNS, DSQ and duplicate position',()=>{assert.deepEqual(sessionPodium(s([r(1),r(1,{driverId:'other'}),r(2,{status:'dsq'}),r(3,{started:false})])),[null,null,null]);});
+test('no same driver twice on podium',()=>assert.deepEqual(sessionPodium(s([r(1),r(2,{driverId:'d1'}),r(3)])).map(x=>x?.position??null),[null,null,3]));
+test('gain from source grid, supports losses, equal and classified retirement',()=>{assert.equal(positionGain(r(1)),4);assert.equal(positionGain(r(8)),-3);assert.equal(positionGain(r(5)),0);assert.equal(positionGain(r(3,{status:'retired'})),2);});
+test('gain absent for unknown/pit lane grid and nonclassification',()=>{for(const x of [{gridPosition:0},{gridPosition:null},{started:false},{classified:false},{status:'dsq'},{position:null}])assert.equal(positionGain(r(1,x)),null);});
+test('race default regardless of source session order; no invented session results',()=>{assert.equal(defaultEventKind({sessions:[{kind:'qualifying'},{kind:'race'}]}),'race');assert.equal(defaultEventKind({sessions:[{kind:'qualifying'}]}),'qualifying');assert.equal(defaultEventKind({sessions:[]}),'race');});

@@ -1,6 +1,6 @@
 // Read-only model for the local preview. Never infer points from position.
 export function buildModel(data) {
-  if (data.schemaVersion !== '2.0.0' || data.datasetStatus !== 'draft' || !Array.isArray(data.events) || !data.events.length) throw Error('Требуется непустая локальная база v2 со статусом draft');
+  if (data.schemaVersion !== '2.0.0' || !['draft','verified'].includes(data.datasetStatus) || !Array.isArray(data.events) || !data.events.length) throw Error('Требуется непустая локальная база v2 со статусом draft или verified');
   const index = arr => new Map(arr.map(x=>[x.id,x]));
   const drivers=index(data.drivers), teams=index(data.constructors), circuits=index(data.circuits), entrants=index(data.entrants||[]);
   const events=index(data.events), sources=index(data.sources);
@@ -26,18 +26,38 @@ export function pairs(m,e){const rows=m.session(e,'race')?.results||[],groups=ne
 
 // H2H counts only directly comparable classified results in the same session and entry.
 export function comparable(r){return r?.classified===true && Number.isInteger(r.position) && r.position>0;}
+const h2hEntry=r=>JSON.stringify([r.constructorId,r.entrantId||null]);
+export const pairKey=p=>JSON.stringify([p.constructorId,p.entrantId||null,p.a,p.b]);
+export function headToHeadResult(s,p,k){
+  if(!s||s.status!=='final')return {outcome:'absent',a:null,b:null};
+  const rows=s.results.filter(r=>r.constructorId===p.constructorId&&(r.entrantId||null)===(p.entrantId||null));
+  const aa=rows.filter(r=>r.driverId===p.a),bb=rows.filter(r=>r.driverId===p.b);
+  const a=aa.length===1?aa[0]:null,b=bb.length===1?bb[0]:null;
+  if(!aa.length||!bb.length)return {outcome:'absent',a,b};
+  const valid=r=>comparable(r)&&!['dns','dsq','excluded','withdrawn','not_classified'].includes(r.status)&&(k==='qualifying'||r.started===true);
+  return {a,b,outcome:!valid(a)||!valid(b)?'skipped':a.position<b.position?'a':b.position<a.position?'b':'tie'};
+}
+export function pairTimeline(m,y,p){
+  const totals={race:{a:0,b:0,tie:0,skipped:0},qualifying:{a:0,b:0,tie:0,skipped:0},sprint:{a:0,b:0,tie:0,skipped:0}};
+  const rows=m.eventsOf(y).filter(m.completed).map(e=>{
+    const row={eventId:e.id,round:e.round,name:e.name};
+    for(const k of Object.keys(totals)){const r=headToHeadResult(m.session(e,k),p,k);if(r.outcome!=='absent')totals[k][r.outcome]++;row[k]={...r,total:{...totals[k]}};}
+    return row;
+  });
+  return {rows,totals};
+}
 export function seasonPairs(m,y){
   const map=new Map();
-  for(const e of m.eventsOf(y).filter(m.completed))for(const k of ['race','qualifying']){
+  for(const e of m.eventsOf(y).filter(m.completed))for(const k of ['race','qualifying','sprint']){
+    const s=m.session(e,k);if(s?.status!=='final')continue;
     const groups=new Map();
-    for(const r of m.session(e,k)?.results||[]){const entry=r.entrantId||r.constructorId;if(!groups.has(entry))groups.set(entry,[]);groups.get(entry).push(r);}
-    for(const [entry,rows] of groups)for(let i=0;i<rows.length;i++)for(let j=i+1;j<rows.length;j++){
+    for(const r of s.results){const entry=h2hEntry(r);if(!groups.has(entry))groups.set(entry,[]);groups.get(entry).push(r);}
+    for(const rows of groups.values())for(let i=0;i<rows.length;i++)for(let j=i+1;j<rows.length;j++){
       const [a,b]=[rows[i],rows[j]].sort((a,b)=>a.driverId.localeCompare(b.driverId));if(a.driverId===b.driverId)continue;
-      const key=JSON.stringify([entry,a.driverId,b.driverId]);if(!map.has(key))map.set(key,{entry,constructorId:a.constructorId,entrantId:a.entrantId,a:a.driverId,b:b.driverId,race:{a:0,b:0,tie:0,skipped:0},qualifying:{a:0,b:0,tie:0,skipped:0}});
-      const v=map.get(key)[k];if(!comparable(a)||!comparable(b)||(k==='race'&&(a.started!==true||b.started!==true)))v.skipped++;else if(a.position<b.position)v.a++;else if(b.position<a.position)v.b++;else v.tie++;
+      const p={entry:a.entrantId||a.constructorId,constructorId:a.constructorId,entrantId:a.entrantId,a:a.driverId,b:b.driverId};map.set(pairKey(p),p);
     }
   }
-  return [...map.values()].sort((a,b)=>m.team(a.constructorId,a.entrantId).localeCompare(m.team(b.constructorId,b.entrantId))||m.driver(a.a).localeCompare(m.driver(b.a))||m.driver(a.b).localeCompare(m.driver(b.b)));
+  return [...map.values()].map(p=>({...p,...pairTimeline(m,y,p).totals})).sort((a,b)=>m.team(a.constructorId,a.entrantId).localeCompare(m.team(b.constructorId,b.entrantId))||m.driver(a.a).localeCompare(m.driver(b.a))||m.driver(a.b).localeCompare(m.driver(b.b)));
 }
 export function driverStats(m,y){
  const rows=new Map(m.driverIds(y).map(id=>[id,{id,starts:0, wins:0,podiums:0,poles:0,fastest:0,retired:0}]));
@@ -63,3 +83,43 @@ export function chartSegments(values,metric){
  if(part.length)segments.push(part);return segments;
 }
 export function defaultComparison(m,y){const ids=m.driverIds(y),ranked=(m.standing(y,'drivers')?.rows||[]).map(r=>r.entityId);return [...new Set([...ranked,...ids])].filter(id=>ids.includes(id)).slice(0,2);}
+
+// Published order; unranked/excluded rows and shared positions are not invented into adjacent ranks.
+export function adjacentStandingGaps(rows){return rows.map((r,i)=>{const p=rows[i-1];return i>0&&Number.isInteger(r.position)&&Number.isInteger(p.position)&&r.position>0&&p.position>0&&r.position>=p.position&&Number.isFinite(r.points)&&Number.isFinite(p.points)?Number((r.points-p.points).toFixed(9)):null;});}
+
+// Final classification only; never promote P4 to a missing podium slot.
+export function sessionPodium(s){
+  if(!s||s.status!=='final'||!['race','sprint'].includes(s.kind))return [];
+  const rows=s.results.filter(r=>comparable(r)&&r.started===true&&!['dns','dsq','excluded','withdrawn','not_classified'].includes(r.status)&&r.position<=3);
+  return [1,2,3].map(p=>{const matches=rows.filter(r=>r.position===p);return matches.length===1&&rows.filter(r=>r.driverId===matches[0].driverId).length===1?matches[0]:null;});
+}
+// Grid position 0 means pit-lane/unknown; no numeric delta in that case.
+export function positionGain(r){
+  return comparable(r)&&r.started===true&&!['dns','dsq','excluded','withdrawn','not_classified'].includes(r.status)&&Number.isInteger(r.gridPosition)&&r.gridPosition>0?r.gridPosition-r.position:null;
+}
+export function defaultEventKind(e){return e.sessions.some(s=>s.kind==='race')?'race':e.sessions[0]?.kind||'race';}
+
+// F1-007.5: descriptive season analytics, never a prediction model.
+export function dashboardStats(m,y){
+ const events=m.eventsOf(y),done=events.filter(m.completed),final=(e,k)=>{const s=m.session(e,k);return s?.status==='final'&&s.results.length?s:null;};
+ const rows=new Map(m.driverIds(y).map(id=>[id,{id,points:null,starts:0,wins:0,podiums:0,poles:0,fastest:0,retired:0}]));
+ const points=m.standing(y,'drivers'),teams=m.standing(y,'constructors');
+ for(const r of points?.rows||[])if(rows.has(r.entityId)&&Number.isFinite(r.points))rows.get(r.entityId).points=r.points;
+ const recent=done.slice(-5).map(e=>({eventId:e.id,round:e.round,name:e.name,race:final(e,'race')}));
+ let races=0,qualifying=0,sprints=0,winners=0,poles=0,fastest=0;
+ const valid=r=>comparable(r)&&!['dns','dsq','excluded','withdrawn','not_classified'].includes(r.status);
+ const unique=s=>s.results.filter(r=>s.results.filter(x=>x.driverId===r.driverId).length===1);
+ for(const e of done){
+  const r=final(e,'race'),q=final(e,'qualifying');
+  if(r){races++;const rr=unique(r);for(const v of rr)if(v.started===true&&rows.has(v.driverId)){const a=rows.get(v.driverId);a.starts++;if(v.status==='retired')a.retired++;}
+   const pod=sessionPodium(r).map(v=>v&&rr.includes(v)?v:null);for(const v of pod)if(v&&rows.has(v.driverId)){rows.get(v.driverId).podiums++;}if(pod[0]&&rows.has(pod[0].driverId)){rows.get(pod[0].driverId).wins++;winners++;}
+   const laps=(m.data.fastestLaps||[]).filter(f=>f.sessionId===r.id);if(laps.length===1&&rr.some(v=>v.driverId===laps[0].driverId&&v.started===true)&&rows.has(laps[0].driverId)){rows.get(laps[0].driverId).fastest++;fastest++;}
+  }
+  if(q){qualifying++;const p=q.results.filter(v=>valid(v)&&v.position===1);if(p.length===1&&unique(q).includes(p[0])&&rows.has(p[0].driverId)){rows.get(p[0].driverId).poles++;poles++;}}
+  if(final(e,'sprint'))sprints++;
+ }
+ const ranked=[...rows.values()].sort((a,b)=>(b.points??-Infinity)-(a.points??-Infinity)||m.driver(a.id).localeCompare(m.driver(b.id)));
+ const form=ranked.map(a=>{const values=recent.map(e=>{const rr=e.race?.results.filter(r=>r.driverId===a.id)||[];return rr.length===1&&rr[0].started===true&&Number.isFinite(rr[0].points)?rr[0].points:null;});const samples=values.filter(Number.isFinite);return {id:a.id,values,count:samples.length,total:samples.length?samples.reduce((a,b)=>a+b,0):null};});
+ const teamRows=(teams?.rows||[]).filter(r=>Number.isInteger(r.position)&&r.position>0&&Number.isFinite(r.points)).sort((a,b)=>a.position-b.position);
+ return {events:events.length,completed:done.length,cancelled:events.filter(e=>e.status==='cancelled').length,races,qualifying,sprints,winners,poles,fastest,drivers:ranked,teamRows,driverRound:points?.afterRound??null,teamRound:teams?.afterRound??null,recent:recent.map(({race,...e})=>e),form};
+}

@@ -1,0 +1,255 @@
+[
+  {
+    "id": "f1db:mclaren",
+    "file": "McLaren Honda Logo.png",
+    "years": [
+      2015,
+      2016
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:McLaren_Honda_Logo.png",
+    "review": "Local DRAFT only; Alternative file uploaded November 2015; 2015 retry; 2016 representative Honda-era identity, exact variant provisional; visual, season and rights review required before publication",
+    "evidence": [],
+    "periodStatus": "provisional_representative"
+  },
+  {
+    "id": "f1db:mclaren",
+    "file": "McLaren logo on the nose of the McLaren MP4 15A (14478887860).jpg",
+    "years": [
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:McLaren_logo_on_the_nose_of_the_McLaren_MP4_15A_%2814478887860%29.jpg",
+    "review": "Local DRAFT only; Photo of 2000 car emblem already downloaded; representative marque for 1997–2006 era per official history, not exact sponsor livery; visual, season and rights review required before publication",
+    "evidence": [
+      "https://www.mclaren.com/racing/heritage/the-story-of-the-marque/"
+    ],
+    "periodStatus": "provisional_representative"
+  },
+  {
+    "id": "f1db:mclaren",
+    "file": "McLaren 2018 logo.svg",
+    "years": [
+      2017
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:McLaren_2018_logo.svg",
+    "review": "Local DRAFT only; Representative monochrome marque introduced in 2017 per official history; no sponsor lockup; visual, season and rights review required before publication",
+    "evidence": [
+      "https://www.mclaren.com/racing/heritage/the-story-of-the-marque/"
+    ],
+    "periodStatus": "provisional_representative"
+  },
+  {
+    "id": "f1db:mercedes",
+    "file": "Mercedesgppetronasf1team.jpg",
+    "years": [
+      2010
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Mercedesgppetronasf1team.jpg",
+    "review": "Local DRAFT only; Team emblem uploaded March 2010; visual, season and rights review required before publication",
+    "evidence": [],
+    "periodStatus": "dated_source"
+  },
+  {
+    "id": "f1db:mercedes",
+    "file": "Mercedes AMG Petronas logo.png",
+    "years": [
+      2012
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Mercedes_AMG_Petronas_logo.png",
+    "review": "Local DRAFT only; 2013 team website file, provisional representative AMG Petronas identity for 2012; visual, season and rights review required before publication",
+    "evidence": [],
+    "periodStatus": "provisional_representative"
+  },
+  {
+    "id": "f1db:mercedes",
+    "file": "Mercedes AMG Petronas F1 Logo.svg",
+    "years": [
+      2015,
+      2016,
+      2017
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Mercedes_AMG_Petronas_F1_Logo.svg",
+    "review": "Local DRAFT only; 2014 team logo; representative AMG Petronas identity for intervening years, exact variants unverified; visual, season and rights review required before publication",
+    "evidence": [],
+    "periodStatus": "provisional_representative"
+  },
+  {
+    "id": "f1db:mercedes",
+    "file": "Mercedes-Benz in Formula One logo.svg",
+    "years": [
+      2018
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_in_Formula_One_logo.svg",
+    "review": "Local DRAFT only; Extracted from official March 2018 team report; representative team identity; visual, season and rights review required before publication",
+    "evidence": [],
+    "periodStatus": "dated_source"
+  },
+  {
+    "id": "f1db:sauber",
+    "file": "Logo Sauber F1.png",
+    "years": [
+      2016
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Logo_Sauber_F1.png",
+    "review": "Local DRAFT only; Commons file uploaded November 2016; uploader reconstruction; visual, season and rights review required before publication",
+    "evidence": [],
+    "periodStatus": "dated_source"
+  },
+  {
+    "id": "f1db:sauber",
+    "file": "Sauber F1 Team logo.svg",
+    "years": [
+      2017
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Sauber_F1_Team_logo.svg",
+    "review": "Local DRAFT only; Dated November 2017 and sourced from formula1.com; visual, season and rights review required before publication",
+    "evidence": [],
+    "periodStatus": "dated_source"
+  },
+  {
+    "id": "f1db:williams",
+    "file": "WilliamsRacing-logo.png",
+    "years": [
+      2021
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:WilliamsRacing-logo.png",
+    "review": "Local DRAFT only; Uploaded June 2021 from formula1.com; visual, season and rights review required before publication",
+    "evidence": [],
+    "periodStatus": "dated_source"
+  },
+  {
+    "id": "f1db:williams",
+    "file": "Williams Racing 2022 logo.svg",
+    "years": [
+      2023
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Williams_Racing_2022_logo.svg",
+    "review": "Local DRAFT only; File revision January 2023 from team website; representative identity; visual, season and rights review required before publication",
+    "evidence": [],
+    "periodStatus": "dated_source"
+  },
+  {
+    "id": "f1db:williams",
+    "file": "Williams racing2025logo.jpg",
+    "years": [
+      2025
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Williams_racing2025logo.jpg",
+    "review": "Local DRAFT only; 2025-named team logo candidate; visual and sponsor match to be checked; visual, season and rights review required before publication",
+    "evidence": [],
+    "periodStatus": "provisional_representative"
+  },
+  {
+    "id": "f1db:racing-point",
+    "file": "SportPesa-Racing-Point-logo-2019.jpg",
+    "years": [
+      2019
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:SportPesa-Racing-Point-logo-2019.jpg",
+    "review": "Local DRAFT only; 2019 SportPesa team logo candidate; visual, season and rights review required before publication",
+    "evidence": [],
+    "periodStatus": "dated_source"
+  },
+  {
+    "id": "f1db:lotus-racing",
+    "file": "Lotus F1 Racing Logo.jpg",
+    "years": [
+      2010
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Lotus_F1_Racing_Logo.jpg",
+    "review": "Local DRAFT only; Listed in Team Lotus 2010–2011 category; representative 2010 identity; visual, season and rights review required before publication",
+    "evidence": [
+      "https://commons.wikimedia.org/wiki/Category:Team_Lotus_(2010-2011)"
+    ],
+    "periodStatus": "provisional_representative"
+  },
+  {
+    "id": "f1db:lotus-f1",
+    "file": "Lotus F1 Team logo.jpg",
+    "years": [
+      2012,
+      2013,
+      2014
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Lotus_F1_Team_logo.jpg",
+    "review": "Local DRAFT only; Photograph at Enstone in 2015, already downloaded; representative Lotus F1 Team identity for 2012–15, not dated sponsor variants; visual, season and rights review required before publication",
+    "evidence": [
+      "https://commons.wikimedia.org/wiki/Category:Lotus_F1_Team"
+    ],
+    "periodStatus": "provisional_representative"
+  },
+  {
+    "id": "f1db:marussia",
+    "file": "Marussia logo on one of their F1 cars (7448443504).jpg",
+    "years": [
+      2013,
+      2014
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Marussia_logo_on_one_of_their_F1_cars_%287448443504%29.jpg",
+    "review": "Local DRAFT only; 2012 photograph already downloaded; representative Marussia emblem, exact years unverified; visual, season and rights review required before publication",
+    "evidence": [],
+    "periodStatus": "provisional_representative"
+  },
+  {
+    "id": "f1db:renault",
+    "file": "Renault Sport F1 logo as of 2016.png",
+    "years": [
+      2017
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Renault_Sport_F1_logo_as_of_2016.png",
+    "review": "Local DRAFT only; 2016 team logo already downloaded; provisional representative 2017 identity; visual, season and rights review required before publication",
+    "evidence": [],
+    "periodStatus": "provisional_representative"
+  },
+  {
+    "id": "f1db:renault",
+    "file": "Renault F1 Team logo 2019.png",
+    "years": [
+      2020
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Renault_F1_Team_logo_2019.png",
+    "review": "Local DRAFT only; 2019 official Renault source already downloaded; provisional representative 2020 identity; visual, season and rights review required before publication",
+    "evidence": [],
+    "periodStatus": "provisional_representative"
+  },
+  {
+    "id": "f1db:hrt",
+    "file": "HRT new logo.jpg",
+    "years": [
+      2012
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:HRT_new_logo.jpg",
+    "review": "Local DRAFT only; July 2011 logo; provisional representative identity, not exact 2012 variant; visual, season and rights review required before publication",
+    "evidence": [],
+    "periodStatus": "provisional_representative"
+  },
+  {
+    "id": "f1db:caterham",
+    "file": "Caterham F1 Team Logo 2012.jpg",
+    "years": [
+      2013
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Caterham_F1_Team_Logo_2012.jpg",
+    "review": "Local DRAFT only; 2012 file already downloaded; provisional representative Caterham identity; visual, season and rights review required before publication",
+    "evidence": [],
+    "periodStatus": "provisional_representative"
+  },
+  {
+    "id": "f1db:alpine",
+    "file": "Logo of alpine f1 team 2022.png",
+    "years": [
+      2023,
+      2024
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Logo_of_alpine_f1_team_2022.png",
+    "review": "Local DRAFT only; 2022 BWT Alpine emblem already downloaded; representative pre-2025 BWT identity, exact variant unverified; visual, season and rights review required before publication",
+    "evidence": [
+      "https://commons.wikimedia.org/wiki/File:BWT_Alpine_F1_Team_Logo.png"
+    ],
+    "periodStatus": "provisional_representative"
+  }
+]

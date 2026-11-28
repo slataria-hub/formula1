@@ -6,3 +6,25 @@ legacy/
 *.local.json
 
 *.zip
+
+# F1-012.3: local-only inputs, outputs and credentials; not an ACL.
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+*.p12
+*.7z
+*.tar
+*.tar.gz
+*.bak
+*.backup
+backup/
+backups/
+node_modules/
+.playwright/
+user.json
+user-state*.json
+predictions*.json
+visual-media.review.json
+SOURCE_SNAPSHOT_MANIFEST.json
