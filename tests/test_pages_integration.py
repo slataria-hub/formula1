@@ -13,6 +13,9 @@ class IntegrationTests(unittest.TestCase):
         (ROOT/'private').mkdir(exist_ok=True);self.tmp=tempfile.TemporaryDirectory(dir=ROOT/'private');self.addCleanup(self.tmp.cleanup);self.root=Path(self.tmp.name);self.repo=self.root/'repo';self.repo.mkdir();self.git('init');self.git('config','user.name','fixture');self.git('config','user.email','fixture@example.invalid')
         f=fixtures.GateTests();f.setUp();self.f=f
         self.code=self.commit({'web/preview/'+k:v for k,v in f.code.items()},'main')
+        env_patch = patch.dict(os.environ, {'GITHUB_ACTIONS': 'true', 'GITHUB_SHA': self.code, 'F1_DEPLOY_MODE': 'publish'})
+        env_patch.start()
+        self.addCleanup(env_patch.stop)
         self.draft=self.commit({'official.json':f.rawdraft,'manifest.json':canon(f.md)},'f1-data')
         f.meta=canon(dict(json.loads(f.meta),sourceDataCommit=self.draft,independentReviewSha256='a'*64))
         self.approved=self.commit({'official.json':f.raw,'manifest.json':f.meta},'f1-approved-data')
